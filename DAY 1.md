@@ -10,5 +10,5 @@ NAHHHH,, **GUI** itu apasih??
 Terus kalo **CLI** itu apa??
 nah, **CLI** sendiri merupakan singkatan dari **C**ommand **L**ine **I**nterface.
 
-![**Perbedaan ***GUI*** dengan ***CLI*** **](https://images.app.goo.gl/7sapzsvnNMhQ8Ehm6)
+![**Perbedaan ***GUI*** dengan ***CLI*** **](https://techreviewadvisor.com/wp-content/uploads/GUI-vs.-CLI-1024x439.jpg)
 
