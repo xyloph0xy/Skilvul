@@ -34,4 +34,12 @@ Filesystem pada windows memiliki banyak disk yang dibagi berdasar huruf alfabet,
   - cd .. : digunakan untuk keluar atau kembali ke direktori sebelumnya.
   - cd namaFile : digunakan untuk membuka sebuah file atau direktori.
 - mkdir : *make directory* digunakan untuk membuat folder baru, syntaxnya **mkdir namaFolder**.
-- touch : digunakan untuk membuat file baru pada folder.
+- touch : digunakan untuk membuat file baru pada folder, syntaxnya **touch namaFile**.
+- nano : digunakan untuk mengedit file yang telah dibuat, syntaxnya **nano namaFile**.
+- cat : digunakan untuk menampilkan seluruh isi sebuah file.
+- head : digunakan untuk melihat isi awal sebuah file.
+- tail : digunakan untuk melihat isi akhiran sebuah file.
+- cp : **copy** digunakan untuk mengcopy file atau folder, syntaxnya **cp namaYangInginDiCopy namaBaru** atau apabila ingin menyalin file ke folder yang berbeda, maka yntaxnya **cp namaFile /namaDirectory/namaFileBaru**
+- mv : **move** digunakan untuk memindahkan atau me-rename sebuah file maupun folder. syntaxnya untuk memindahkan **mv namaFile /namaDirektori/namaFile**, syntax untuk rename **mv namaFile namaFileBaru**.
+- rm : **remove** digunakan untuk menghapus sebuah file, syntaxnya **rm namaFile**. untuk menghapus directory syntaxnya **rm -R namaFile** atau **rm -d namaFile**.
+- 
