@@ -62,9 +62,9 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 - Untuk melihat perubahan yang terjadi dapat dengan melakukan perintah `git status`. Ketika melakukan `git status` maka akan muncul peringatan `nothing added to commit but untracked files present (use "git add" to track)` itu artinya perubahan yang kita lakukan belum terlacak atau belum ditandain. Untuk melacak perubahan yang kita lakukan maka dapat menggunakan perintah `git add .`
 
-- `git add .` Titik `.` pada `git add .` artinya lokasi saat ini, itu tandanya git akan melacak semua perubahan yang terdapat pada lokasi saat ini tersebut. Untuk melacak perubahan pada satu file secara spesifik maka dapat melakukan perintah `git add namaFile`. Setelah melakukan `git add .` maka perubahan yang kita lakukan sudah di lacak atau di tandain. Nah perubahan tersebut harus kita namain dong biar ga bingung. Misal kita membuat perubahan pada sebuah file dengan menambahkan biodata lengkap penulis dari A-Z, perubahan tersebut kita kasih nama *tambah biodata penulis* untuk memudahkan kita mengetahui perubahan apa yang udah dilakukan. 
+- `git add .` Titik `.` pada `git add .` artinya lokasi saat ini, itu tandanya git akan melacak semua perubahan yang terdapat pada lokasi saat ini tersebut. Untuk melacak perubahan pada satu file secara spesifik maka dapat melakukan perintah `git add namaFile`. Setelah melakukan `git add .` maka perubahan yang kita lakukan sudah di lacak atau di tandain. `git add` sendiri akan masuk ke **STAGING AREA**, duh Staging Area itu apa sih?? anggap saja staging area adalah sebuah file yang menyimpan informasi secara sementara mengenai data yang akan dimasukkan ke dalam `git commit` nantinya. Nah perubahan tersebut harus kita namain dong biar ga bingung. Misal kita membuat perubahan pada sebuah file dengan menambahkan biodata lengkap penulis dari A-Z, perubahan tersebut kita kasih nama *tambah biodata penulis* untuk memudahkan kita mengetahui perubahan apa yang udah dilakukan. 
 
-- Untuk memberikan nama pada perubahan tersebut dapat melakukan perintah `git commit -m "blablabla"`, setelah melakukan `git commit -m "blablabla"` maka akan muncul  pada tampilan git. 
+- Untuk memberikan nama pada perubahan tersebut secara permanen dapat melakukan perintah `git commit -m "blablabla"`, setelah melakukan `git commit -m "blablabla"` maka akan muncul  pada tampilan git. 
 
 >>`$ git commit -m "add biodata"`
 
@@ -72,5 +72,9 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 >> `1 file changed, 2 insertions(+)`
 
-- 
+- Untuk melihat hasil commit yang tersimpan dapat melakukan perintah `git log`. Karena hasil commit yang akan ditampilkan akan panjang, kita dapat mempersingkat tampilannya dengan perintah `git log --oneline`. Untuk keluar dari tampilan `git log` lakukan perintah `:q`.
+
+- Untuk kembali ke hasil commit sebelumnya maka dapat melakukan perintah `git checkout alamatCommit`, alamat commit sebelumnya dapat dilihat ketika melakukan perintah `git log --oneline`. Ketika file yang telah di checkout di buka, maka data dari file tersebut akan kembali ke data commit lama sesuai dengan yang diminta tadi. **Aduhh kalo pengen balik ke commit terakhir gimana nihh??** Jangan panik, kamu dapat melakukan perintah git checkout main(menyesuaikan dengan akun githubmu). Maka ketika file dibuka data yang ditampilkan adalah data sesuai dengan commit terbaru.
+
+- `git reset`
 
