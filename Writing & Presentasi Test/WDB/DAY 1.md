@@ -29,7 +29,9 @@ Filesystem pada windows memiliki banyak disk yang dibagi berdasar huruf alfabet,
 ### Nah, sekarang sudah saatnya kita mempelajari perintah dasar CLI :
 
 - pwd : _print working directory_ digunakan untuk melihat lokasi kita berada.
-- ls : _list_ digunakan untuk melihat daftar file maupun folder.
-- cd : _change directory_ digunakan untuk berpindah direktori atau folder. Macam-macam perintah cd :
+- ls : _list_ digunakan untuk melihat daftar file maupun folder. Ada perintah ls lainnya, yaitu **ls -a** yang digunakan untuk menampilkan folder yang di hidden. syntaxnya **ls namaFile**
+- cd : _change directory_ digunakan untuk berpindah direktori atau folder, syntaxnya **cd namaFile**. Untuk memanggil file yang penamaannya memiliki spasi maka dapat menggunakan "..". Macam-macam perintah cd :
   - cd .. : digunakan untuk keluar atau kembali ke direktori sebelumnya.
   - cd namaFile : digunakan untuk membuka sebuah file atau direktori.
+- mkdir : *make directory* digunakan untuk membuat folder baru, syntaxnya **mkdir namaFolder**.
+- touch : digunakan untuk membuat file baru pada folder.
