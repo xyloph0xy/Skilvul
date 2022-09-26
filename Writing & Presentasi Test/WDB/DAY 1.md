@@ -43,9 +43,34 @@ Filesystem pada windows memiliki banyak disk yang dibagi berdasar huruf alfabet,
 - mv : **move** digunakan untuk memindahkan atau me-rename sebuah file maupun folder. syntaxnya untuk memindahkan  `mv namaFile /namaDirektori/namaFile`, syntax untuk rename **mv namaFile namaFileBaru**.
 - rm : **remove** digunakan untuk menghapus sebuah file, syntaxnya `rm namaFile`. untuk menghapus directory syntaxnya `rm -R namaFile` atau `rm -d namaFile`. Nah ada lagi sebuah syntax yang digunakan untuk menghapus sebuah folder dengan paksa, yaitu `rm -rf namaFolder`.
 
-# GIT & GITHUB
+# **GIT & GITHUB**
 Simpelnya **GIT** adalah software, sedangkan **GITHUB** adalah tempat untuk mengupload codingan.
 
-## Mengenal **GIT lebih lanjut
+### Kenapa sih harus belajar **GIT** & **GITHUB**
+Di **GIT** kamu dapat melakukan kolaborasi bersama teman tanpa repot harus copy paste folder aplikasi yang terupdate seperti yang kamu lakukan ketika mengerjakan skripsi.
+
+Kamu juga dapat mengerjakan bagianmu terlebih dahulu tanpa menunggu teman, kamu dapat membuat file di dalam project yang sama kemudian disatukan ketikasudah selesai.
+
+## Mengenal **GIT** lebih lanjut
 **GIT** adalah sebuah TOOLS yang digunakan programmer untuk membantu membuat *Version Control System*, mudahnya **GIT** digunakan untuk melacak semua perubahan data yang sudah kita lakukan, termasuk siapa yang mengubahnya. Untuk mendapat gambaran lebih lanjut, hal tersebut juga terdapat pada google docs 
-![pelacakan perubahan data](https://apsachieveonline.org/in/wp-content/uploads/2019/09/Cara-Menggunakan-Lacak-Perubahan-di-Google-Documents.jpg)
+<img src="https://apsachieveonline.org/in/wp-content/uploads/2019/09/Cara-Menggunakan-Lacak-Perubahan-di-Google-Documents.jpg" width="900" height="350">
+
+Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --global user.name "username"` setelah di enter setup emailnya `git config --global user.email "email"`. Pastikan setup awal berhasil dilakukan `git config --list`.
+
+### Repository **GIT**
+- Langkah pertama adalah melakukan `git init`. **Fungsi `git init` apasih ?** `git init` akan melakukan inisialisasi pada directory  kemudian akan membuat direktori ***.git*** dalam proyek kita yang dapat digunakan untuk menyimpan perubahan yang kita lakukan. Simpelnya `git init` itu kaya kita lagi masang memory card pada  hp yang hanya bisa dipasang satu memory card. `git init` hanya bisa dijalankan satu kali saja.  Nah ketika kita sudah melakukan `git init`, tandanya kita sudah memasang *git* pada project kita.
+
+- Untuk melihat perubahan yang terjadi dapat dengan melakukan perintah `git status`. Ketika melakukan `git status` maka akan muncul peringatan `nothing added to commit but untracked files present (use "git add" to track)` itu artinya perubahan yang kita lakukan belum terlacak atau belum ditandain. Untuk melacak perubahan yang kita lakukan maka dapat menggunakan perintah `git add .`
+
+- `git add .` Titik `.` pada `git add .` artinya lokasi saat ini, itu tandanya git akan melacak semua perubahan yang terdapat pada lokasi saat ini tersebut. Untuk melacak perubahan pada satu file secara spesifik maka dapat melakukan perintah `git add namaFile`. Setelah melakukan `git add .` maka perubahan yang kita lakukan sudah di lacak atau di tandain. Nah perubahan tersebut harus kita namain dong biar ga bingung. Misal kita membuat perubahan pada sebuah file dengan menambahkan biodata lengkap penulis dari A-Z, perubahan tersebut kita kasih nama *tambah biodata penulis* untuk memudahkan kita mengetahui perubahan apa yang udah dilakukan. 
+
+- Untuk memberikan nama pada perubahan tersebut dapat melakukan perintah `git commit -m "blablabla"`, setelah melakukan `git commit -m "blablabla"` maka akan muncul  pada tampilan git. 
+
+>>`$ git commit -m "add biodata"`
+
+>>`[master fbc3c12] add biodata`
+
+>> `1 file changed, 2 insertions(+)`
+
+- 
+
