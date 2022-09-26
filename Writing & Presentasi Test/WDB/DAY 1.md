@@ -76,5 +76,12 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 - Untuk kembali ke hasil commit sebelumnya maka dapat melakukan perintah `git checkout alamatCommit`, alamat commit sebelumnya dapat dilihat ketika melakukan perintah `git log --oneline`. Ketika file yang telah di checkout di buka, maka data dari file tersebut akan kembali ke data commit lama sesuai dengan yang diminta tadi. **Aduhh kalo pengen balik ke commit terakhir gimana nihh??** Jangan panik, kamu dapat melakukan perintah git checkout main(menyesuaikan dengan akun githubmu). Maka ketika file dibuka data yang ditampilkan adalah data sesuai dengan commit terbaru.
 
-- `git reset` berbeda dengan `git checkout`. `git reset` akan menghapus file terbaru yang kamu lewati ketika kamu kembali ke file sebelumnya, sedangkan `git checkout` hanya berpindah dan tidak menghapus file yang dilewati. Untuk lebih jelasnya bayangkan saja kamu membuat commit *lama banget*, *lama*, *baru*, *baru banget*. Saat ini kamu sedang berada di *baru banget* dan ingin kembali ke *lama banget* menggunakan perintah `git checkout` maka commit *baru banget*, *baru* dan *lama* tidak akan terhapus. Namun apabila kamu menggunakan perintah `git reset` untuk kembali ke commit *lama banget* maka commit commit *baru banget*, *baru* dan *lama* akan terhapus dan kamu tidak akan bisa kembali ke commit *baru banget*, *baru* dan *lama*
+- `git reset` berbeda dengan `git checkout`. `git reset` akan menghapus file terbaru yang kamu lewati ketika kamu kembali ke file sebelumnya, sedangkan `git checkout` hanya berpindah dan tidak menghapus file yang dilewati. Untuk lebih jelasnya bayangkan saja kamu membuat commit *lama banget*, *lama*, *baru*, *baru banget*. Saat ini kamu sedang berada di *baru banget* dan ingin kembali ke *lama banget* menggunakan perintah `git checkout` maka commit *baru banget*, *baru* dan *lama* tidak akan terhapus. Namun apabila kamu menggunakan perintah `git reset` untuk kembali ke commit *lama banget* maka  commit *baru banget*, *baru* dan *lama* akan terhapus dan kamu tidak akan bisa kembali ke commit *baru banget*, *baru* dan *lama*
 
+### **GIT**
+#### Kalo mau upload commit ke internet gimana dong??
+1. Kamu harus mempunyai akun [github](https://github.com/login) terlebih dahulu.
+2. Buat [Repository](https://www.niagahoster.co.id/blog/git-tutorial-dasar/#3_Buat_Repository) pada akun githubmu
+3. Hubungkan folder lokal dengan repository github menggunakan `git remote add origin https://github.com/namaAkunmu/`
+4. Setelah dihubungkan maka kamu harus mengupload file dengan menggunakan `git push -u origin main(mengkuti akun githubmu)`
+5. Setelah di push, kamu dapat mengeceknya di akun githubmu
