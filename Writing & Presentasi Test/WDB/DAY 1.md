@@ -44,4 +44,8 @@ Filesystem pada windows memiliki banyak disk yang dibagi berdasar huruf alfabet,
 - rm : **remove** digunakan untuk menghapus sebuah file, syntaxnya `rm namaFile`. untuk menghapus directory syntaxnya `rm -R namaFile` atau `rm -d namaFile`. Nah ada lagi sebuah syntax yang digunakan untuk menghapus sebuah folder dengan paksa, yaitu `rm -rf namaFolder`.
 
 # GIT & GITHUB
+Simpelnya **GIT** adalah software, sedangkan **GITHUB** adalah tempat untuk mengupload codingan.
 
+## Mengenal **GIT lebih lanjut
+**GIT** adalah sebuah TOOLS yang digunakan programmer untuk membantu membuat *Version Control System*, mudahnya **GIT** digunakan untuk melacak semua perubahan data yang sudah kita lakukan, termasuk siapa yang mengubahnya. Untuk mendapat gambaran lebih lanjut, hal tersebut juga terdapat pada google docs 
+![pelacakan perubahan data](https://apsachieveonline.org/in/wp-content/uploads/2019/09/Cara-Menggunakan-Lacak-Perubahan-di-Google-Documents.jpg)
