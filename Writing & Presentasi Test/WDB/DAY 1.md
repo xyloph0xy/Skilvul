@@ -78,10 +78,13 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 - `git reset` berbeda dengan `git checkout`. `git reset` akan menghapus file terbaru yang kamu lewati ketika kamu kembali ke file sebelumnya, sedangkan `git checkout` hanya berpindah dan tidak menghapus file yang dilewati. Untuk lebih jelasnya bayangkan saja kamu membuat commit *lama banget*, *lama*, *baru*, *baru banget*. Saat ini kamu sedang berada di *baru banget* dan ingin kembali ke *lama banget* menggunakan perintah `git checkout` maka commit *baru banget*, *baru* dan *lama* tidak akan terhapus. Namun apabila kamu menggunakan perintah `git reset` untuk kembali ke commit *lama banget* maka  commit *baru banget*, *baru* dan *lama* akan terhapus dan kamu tidak akan bisa kembali ke commit *baru banget*, *baru* dan *lama*
 
-### **GIT**
+## **GIT**
 #### Kalo mau upload commit ke internet gimana dong??
 1. Kamu harus mempunyai akun [github](https://github.com/login) terlebih dahulu.
 2. Buat [Repository](https://www.niagahoster.co.id/blog/git-tutorial-dasar/#3_Buat_Repository) pada akun githubmu
 3. Hubungkan folder lokal dengan repository github menggunakan `git remote add origin https://github.com/namaAkunmu/`
 4. Setelah dihubungkan maka kamu harus mengupload file dengan menggunakan `git push -u origin main(mengkuti akun githubmu)`
 5. Setelah di push, kamu dapat mengeceknya di akun githubmu
+
+### Apa itu **BRANCH** ??
+**Branch** adalah cabang dari timeline yang kita buat, nah cabang tersebut dapat kita buat
