@@ -118,5 +118,22 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 >> <img src="https://storage.googleapis.com/kotakode-prod-public/images/3712fa54-eb41-45e8-94a2-cae09b0bbbce-image.png" weight="600" height="200">
 4. Beri konten di antara tag `<body>*contoh konten*</body>`
 5. Untuk memudahkan kamu melihat kode HTML yang telah dibuat pada browser, kamu dapat menginstall extension [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) pada VSCode. **Cara pakainya gimana tuh ?** Caranya gampang kok, kamu cukup ketik `ctrl+Shift+P` kemudian cari `Live Server: Open with live server`. Setelah berhasil maka akan terbuka halaman browser baru yang berisi konten yang sudah kamu buat sebelumnya.
-6. Untuk membuat konten pada website terlihat lebih menarik, kamu dapat menggunakan tag HTML dibawah ini :
-> <h1>...</h1> : digunakan untuk membuat heading pada sebuah teks. tag heading tersebut tersedia dari <h1> sampai <h6>, semakin banyak angkanya maka akan semakin kecil ukuran teksnya.
+6. Untuk membuat konten pada website terlihat lebih menarik, kamu dapat menggunakan [tag HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#:~:text=The%20HTML%20element%20contains,or%20part%20of%20a%20document.&text=The%20HTML%20Title%20element%20(%20%3Ctitle,bar%20or%20a%20page's%20tab.) dibawah ini :
+- `<header>` : digunakan untuk membuat header pada web.
+- `<footer>` : digunakan untuk membuat footer pada  web.
+- `<nav>` : digunakan untuk membuat navbar pada web.
+- `<h1>` : digunakan untuk membuat heading pada sebuah teks. tag heading tersebut tersedia dari `<h1> sampai <h6>`, semakin banyak angkanya maka akan semakin kecil ukuran teksnya.
+- `<p>` : digunakan untuk membuat paragraf.
+- `<a>` : digunakan untuk membuat link pada web, di dalam tag `<a>` terdapat sebuah atribut `href=""` yang berguna untuk menyimpan link website yang dituju.
+- `<ul>` : digunakan untuk membuat unordered list.
+- `<ol>` : digunakan untuk membuat ordered list.
+- `<img>`: digunakan untuk menampilkan gambar, di dalam tag `<a>` terdapat atribut `src=""` yang berfungsi untuk menampung sumber foto yang akan ditampilkan. Terdapat juga tag `<video> <audio>` yang fungsinya  hampir sama dengan tag `<img>`.
+- `<iframe>`: digunakan untuk menampilkan halaman website lainnya ke dalam website yang kita buat.
+- `<table>` : digunakan untuk membuat tabel sebagai elemen utama. Di dalam tag `<table>` terdapat tag `<tr>` yang digunakan untuk membuat baris baru pada tabel, sedangkan tag `<td>` digunakan sebagai container dari data yang mau kita isi.
+- `<form>` : digunakan untuk mengawali pembuatan formulir, di dalam tag `<form>` terdapat beberapa tag yang dapat digunakan, antara lain :
+   - `<input>` : digunakan untuk membuat kotak input dimana user akan mengisi data.
+   - `<select> <option>` : digunakan untuk membuat dropdown.
+   - `<fieldset>` : digunakan untuk memberi garis tepi pada element HTML yang ingin kita kelompokkan
+   - `<legend>` : digunakan untuk memberi keterangan pada fieldset yang kita buat
+   - `<textarea>` : digunakan untuk membuat kolom komentar.
+   - `<button>` : digunakan untuk membuat tombol yang dapat di klik.
