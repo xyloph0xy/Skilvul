@@ -119,9 +119,6 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 4. Beri konten di antara tag `<body>*contoh konten*</body>`
 5. Untuk memudahkan kamu melihat kode HTML yang telah dibuat pada browser, kamu dapat menginstall extension [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) pada VSCode. **Cara pakainya gimana tuh ?** Caranya gampang kok, kamu cukup ketik `ctrl+Shift+P` kemudian cari `Live Server: Open with live server`. Setelah berhasil maka akan terbuka halaman browser baru yang berisi konten yang sudah kamu buat sebelumnya.
 6. Untuk membuat konten pada website terlihat lebih menarik, kamu dapat menggunakan [tag HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) dibawah ini :
-- `<header>` : digunakan untuk membuat header pada web.
-- `<footer>` : digunakan untuk membuat footer pada  web.
-- `<nav>` : digunakan untuk membuat navbar pada web.
 - `<h1>` : digunakan untuk membuat heading pada sebuah teks. tag heading tersebut tersedia dari `<h1> sampai <h6>`, semakin banyak angkanya maka akan semakin kecil ukuran teksnya.
 - `<p>` : digunakan untuk membuat paragraf.
 - `<a>` : digunakan untuk membuat link pada web, di dalam tag `<a>` terdapat sebuah atribut `href=""` yang berguna untuk menyimpan link website yang dituju.
@@ -137,3 +134,12 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
    - `<legend>` : digunakan untuk memberi keterangan pada fieldset yang kita buat
    - `<textarea>` : digunakan untuk membuat kolom komentar.
    - `<button>` : digunakan untuk membuat tombol yang dapat di klik.
+7. Kamu juga dapat menggunakan element semantic pada HTML. **Elemen Semantic itu apa sih ?** Elemen semantik adalah elemen yang memiliki makna dan tujuan tersendiri, contoh :
+-  `<header>` : digunakan untuk membuat header pada web.
+- `<footer>` : digunakan untuk membuat footer pada  web.
+- `<nav>` : digunakan untuk membuat navigasi pada web.
+- `<article>` : digunakan untuk membuat artikel.
+- `<aside>` : digunakan untuk membuat elemen bagian samping.
+- `<main>` : digunakan untuk membuat elemen utama
+- `<summary>` : digunakan untuk membuat ringkasan artikel
+Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan mudah dibaca, baik itu oleh manusia maupun mesin.
