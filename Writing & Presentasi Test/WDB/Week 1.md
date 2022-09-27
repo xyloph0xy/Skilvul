@@ -89,5 +89,13 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 4. Setelah dihubungkan maka kamu harus mengupload file dengan menggunakan `git push -u origin main(mengkuti akun githubmu)`
 5. Setelah di push, kamu dapat mengeceknya di akun githubmu
 
+#### Aku pengen [cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) repository githubku ke local nih, caranya gimana ya??
+1. Buka halaman utama repository yang ingin kamu clone pada github
+2. Copy url repositorymu menggunakan HTTPS
+>><img src="https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png" weight="300" height="250">
+3. Buka *Git Bash*mu, kemudian pindah ke lokasi directory yang inginkan
+4. Ketik perintah `git clone *URLyangSudahKamuCopy`
+5. Selesai deh, yeyy kamu berhasil!!
+
 ### Apa itu **BRANCH** ??
 **Branch** adalah cabang dari timeline yang kita buat, nah cabang tersebut dapat kita buat
