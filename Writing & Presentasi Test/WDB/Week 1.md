@@ -142,4 +142,5 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 - `<aside>` : digunakan untuk membuat elemen bagian samping.
 - `<main>` : digunakan untuk membuat elemen utama
 - `<summary>` : digunakan untuk membuat ringkasan artikel
+
 Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan mudah dibaca, baik itu oleh manusia maupun mesin.
