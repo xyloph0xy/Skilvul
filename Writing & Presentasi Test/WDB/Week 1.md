@@ -106,3 +106,8 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 ### **HTML** itu apa sih ?
 **HTML** merupakan singkatan dari Hypertext Markup Language yang berfungsi untuk menampilkan konten pada browser, konten di sini dapat berupa text, image, video, link, dan masih banyak lagi. **HTML bersifat STATIS bukan DINAMIS**, apa sih artinya ? HTML hanya bisa menampilkan konten yang diminta oleh developer. Karena HTML tidak bisa **DINAMIS** mengolah data, maka HTML **BUKAN** merupakan bahasa pemrograman.
+
+### Tools apa aja sih yang dibutuhkan ?
+1. **Browser**, browser akan menerjemahkan kode html supaya dapat ditampilkan sesuai dengan yang dirancang oleh developer. Mudahnya, browser pada HTML mempunyai fungsi yang sama sebagai *compiler dan  intepreter* pada bahasa pemrogaman yang lain.
+2. **Code Editor**, berfungsi untuk menuliskan kode HTML yang akan ditampilkan pada browser. Code editor yang akan kita pakai adalah [VSCode](https://code.visualstudio.com/download), **Kenapa harus pake VSCode, kan ada code editor yang lain?** Tidak hanya mendukung HTML, VSCode juga mendukung semua bahasa pemrograman. Selain itu kamu dapat menggunakan [**extension**](https://scotch.io/bar-talk/22-best-visual-studio-code-extensions-for-web-development) untuk mempermudah codinganmu. VSCode juga dapat digunakan di system operasi windows, linux dan macbook.
+
