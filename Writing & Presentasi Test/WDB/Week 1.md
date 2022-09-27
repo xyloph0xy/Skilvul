@@ -99,3 +99,10 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 
 ### Apa itu **BRANCH** ??
 **Branch** adalah cabang dari timeline yang kita buat, nah cabang tersebut dapat kita buat
+
+# DAY 2: 20 September 2022
+
+## **HTML**
+
+### **HTML** itu apa sih ?
+**HTML** merupakan singkatan dari Hypertext Markup Language yang berfungsi untuk menampilkan konten pada browser, konten di sini dapat berupa text, image, video, link, dan masih banyak lagi. **HTML bersifat STATIS bukan DINAMIS**, apa sih artinya ? HTML hanya bisa menampilkan konten yang diminta oleh developer. Karena HTML tidak bisa **DINAMIS** mengolah data, maka HTML **BUKAN** merupakan bahasa pemrograman.
