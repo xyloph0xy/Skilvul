@@ -54,8 +54,9 @@ Di **GIT** kamu dapat melakukan kolaborasi bersama teman tanpa repot harus copy 
 Kamu juga dapat mengerjakan bagianmu terlebih dahulu tanpa menunggu teman, kamu dapat membuat file di dalam project yang sama kemudian disatukan ketikasudah selesai.
 
 ## Mengenal **GIT** lebih lanjut
-**GIT** adalah sebuah TOOLS yang digunakan programmer untuk membantu membuat *Version Control System*, mudahnya **GIT** digunakan untuk melacak semua perubahan data yang sudah kita lakukan, termasuk siapa yang mengubahnya. Untuk mendapat gambaran lebih lanjut, hal tersebut juga terdapat pada google docs 
-<img src="https://apsachieveonline.org/in/wp-content/uploads/2019/09/Cara-Menggunakan-Lacak-Perubahan-di-Google-Documents.jpg" width="900" height="350">
+**GIT** adalah sebuah TOOLS yang digunakan programmer untuk membantu membuat *Version Control System*, mudahnya **GIT** digunakan untuk melacak semua perubahan data yang sudah kita lakukan, termasuk siapa yang mengubahnya. Untuk mendapat gambaran lebih lanjut, hal tersebut juga terdapat pada google docs.
+
+<img src="https://apsachieveonline.org/in/wp-content/uploads/2019/09/Cara-Menggunakan-Lacak-Perubahan-di-Google-Documents.jpg" width="400" height="220">
 
 Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --global user.name "username"` setelah di enter setup emailnya `git config --global user.email "email"`. Pastikan setup awal berhasil dilakukan `git config --list`.
 
