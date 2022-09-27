@@ -118,3 +118,5 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 >> <img src="https://storage.googleapis.com/kotakode-prod-public/images/3712fa54-eb41-45e8-94a2-cae09b0bbbce-image.png" weight="600" height="200">
 4. Beri konten di antara tag `<body>*contoh konten*</body>`
 5. Untuk memudahkan kamu melihat kode HTML yang telah dibuat pada browser, kamu dapat menginstall extension [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) pada VSCode. **Cara pakainya gimana tuh ?** Caranya gampang kok, kamu cukup ketik `ctrl+Shift+P` kemudian cari `Live Server: Open with live server`. Setelah berhasil maka akan terbuka halaman browser baru yang berisi konten yang sudah kamu buat sebelumnya.
+6. Untuk membuat konten pada website terlihat lebih menarik, kamu dapat menggunakan tag HTML dibawah ini :
+> <h1>...</h1> : digunakan untuk membuat heading pada sebuah teks. tag heading tersebut tersedia dari <h1> sampai <h6>, semakin banyak angkanya maka akan semakin kecil ukuran teksnya.
