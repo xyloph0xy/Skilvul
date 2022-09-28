@@ -41,8 +41,8 @@ Filesystem pada windows memiliki banyak disk yang dibagi berdasar huruf alfabet,
 - cat : digunakan untuk menampilkan seluruh isi sebuah file.
 - head : digunakan untuk melihat isi awal sebuah file.
 - tail : digunakan untuk melihat isi akhiran sebuah file.
-- cp : **copy** digunakan untuk mengcopy file atau folder, syntaxnya `cp namaYangInginDiCopy namaBaru` atau apabila ingin menyalin file ke folder yang berbeda, maka yntaxnya `cp namaFile /namaDirectory/namaFileBaru`
-- mv : **move** digunakan untuk memindahkan atau me-rename sebuah file maupun folder. syntaxnya untuk memindahkan  `mv namaFile /namaDirektori/namaFile`, syntax untuk rename **mv namaFile namaFileBaru**.
+- cp : **copy** digunakan untuk mengcopy file atau folder, syntaxnya `cp namaYangInginDiCopy namaBaru` atau apabila ingin menyalin file ke folder yang berbeda, maka yntaxnya `cp namaFile namaDirectory namaFileBaru`
+- mv : **move** digunakan untuk memindahkan atau me-rename sebuah file maupun folder. syntaxnya untuk memindahkan  `mv namaFile namaDirektori`, syntax untuk rename **mv namaFile namaFileBaru**.
 - rm : **remove** digunakan untuk menghapus sebuah file, syntaxnya `rm namaFile`. untuk menghapus directory syntaxnya `rm -R namaFile` atau `rm -d namaFile`. Nah ada lagi sebuah syntax yang digunakan untuk menghapus sebuah folder dengan paksa, yaitu `rm -rf namaFolder`.
 
 # **GIT & GITHUB**
