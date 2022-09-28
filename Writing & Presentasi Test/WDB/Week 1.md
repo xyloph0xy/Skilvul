@@ -144,3 +144,14 @@ Langkah awal untuk menjalankan git adalah melakukan setup awal `git config --glo
 - `<summary>` : digunakan untuk membuat ringkasan artikel
 
 Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan mudah dibaca, baik itu oleh manusia maupun mesin.
+
+### [Mendeploy](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) website menggunakan Github di **Netlify**
+1. Push codinganmu ke dalam repository github
+2. Buka akun [netlifymu](https://www.netlify.com/)
+3. Klik add new site dan pilih *Import an existing project*
+
+>> <img src="https://miro.medium.com/max/640/1*o0Ls6cjYQSiqo0MyojjVvg.png">
+4. Pilih github
+5. Pilih repository yang ingin kamu deploy ke netlify, pastikan dalam repository tersebut terdapat file index.html
+6. Klik deploy site
+7. Tunggu hingga proses deploy selesai ^^
