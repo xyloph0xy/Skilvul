@@ -209,8 +209,13 @@ Viewport dalam website adalah daerah yang menampilkan halaman web yang sedang ki
 ### Flexbox
 Flexbox adalah sebuah pengaturan elemen pada website beserta item di dalamnya  untuk beradaptasi dengan Parent/Container-nya. 
 
-**Container dan Item itu apa sih?**
+#### **Container dan Item itu apa sih?**
 container adalah element yang membungkus dan mengatur tampilan dari element di dalamnya, sedangkan item adalah element dalam container yang diatur tampilannya.
 
 <img src="https://sharkcoder.com/files/article/flex1.png" weight="600" height="200">
 
+### Properti yang ada pada flexbox
+#### *flex-direction*
+Digunakan untuk menentukan ke arah mana kontainer akan menumpukkan item-item fleksibelnya, nah value-nya dapat berupa:
+1 column (top ke bottom secara vertikal) 
+2 column-reverse (bottom ke top secara vertikal)
