@@ -174,11 +174,21 @@ Syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin d
 3. *value*, spesifiknya pengen kamu kasih apa (aku kasih warna ***MERAH*** aja deh).
 
 ### Cara pakai [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp) itu gimana ?
-1. Selector tag `Tag{...}` digunakan untuk memberi style berdasar tag
-2. Selector class `.namaClass{...}` digunakan untuk memberi style berdasar kelas
-3. Selector ID `#namaID{...}` digunakan untuk memberi style berdasar ID
-4. Selector atribut `Tag[Atribut]{...}` digunakan untuk memberi style berdasar atribut yang ada di dalam tag
-5. Selector universal`*{...}` digunakan untuk memberi style semua element
-6. Pseudo Selektor digunakan untuk mengakses bagian tertentu dalam HTML yang tidak 'terlihat' (tidak tertulis di dalam HTML) atau bagian dari HTML yang tidak bisa diakses dengan selector sederhana lain. Pseudo selector ada dua macam :
+1. Selector ID `#namaID{...}` digunakan untuk memberi style berdasar ID
+2. Selector tag `Tag{...}` digunakan untuk memberi style berdasar tag
+3. Selector class `.namaClass{...}` digunakan untuk memberi style berdasar kelas
+5. Selector atribut `Tag[Atribut]{...}` digunakan untuk memberi style berdasar atribut yang ada di dalam tag
+6. Selector universal`*{...}` digunakan untuk memberi style semua element
+7. Pseudo Selektor digunakan untuk mengakses bagian tertentu dalam HTML yang tidak 'terlihat' (tidak tertulis di dalam HTML) atau bagian dari HTML yang tidak bisa diakses dengan selector sederhana lain. Pseudo selector ada dua macam :
     - Pseudo-class `selector:pseudo-class:{...}`
     - pseudo-element `selector::pseudo-element{...}`
+
+## Di CSS bisa ngapain aja sih ?
+Ada banyak yang bisa kamu lakukan dengan CSS, salah satunya :
+1. [**BOX MODEL**](https://skilvul.com/courses/css-dasar/lessons/css-box-model/topics/definisi-box-model)
+Jadi, semua HTML element itu dianggap sebagai sebuah kotak (box). Karena hal inilah istilah box model muncul.
+Box model sendiri bisa kalian anggap sebagai kotak yang membungkus setiap HTML element.
+
+3. [**DISPLAY**](https://skilvul.com/courses/css-dasar/lessons/css-display/topics/display:-none-vs-visibility:-hidden)
+4. [**POSITION**](https://skilvul.com/courses/css-dasar/lessons/css-position/topics/position:-static)
+5. Sebenarnya masih banyak lagi, kamu bisa lihat styling CSS yang lebih lengkap [*disini*](https://www.w3schools.com/css/default.asp)
