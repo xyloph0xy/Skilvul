@@ -183,7 +183,7 @@ Syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin d
     - Pseudo-class `selector:pseudo-class:{...}`
     - pseudo-element `selector::pseudo-element{...}`
 
-## Di CSS bisa ngapain aja sih ?
+### Di CSS bisa ngapain aja sih ?
 Ada banyak yang bisa kamu lakukan dengan CSS, salah satunya :
 1. [**BOX MODEL**](https://skilvul.com/courses/css-dasar/lessons/css-box-model/topics/definisi-box-model)
 Jadi, semua HTML element itu dianggap sebagai sebuah kotak (box). Karena hal inilah istilah box model muncul.
@@ -202,3 +202,8 @@ Dengan properti display, kita bisa mengatur bagaimana box tersebut ditampilkan: 
     - `position: sticky`, Element dengan posisi sticky akan diposisikan berdasarkan scroll halaman dari user. `position:sticky` pada dasarnya adalah seperti gabungan dari `position:relative` dan `position: fixed`.
 
 7. Sebenarnya masih banyak lagi, kamu bisa lihat styling CSS yang lebih lengkap [*disini*](https://www.w3schools.com/css/default.asp)
+
+### Membuat Website [Responsive](https://skilvul.com/courses/css-dasar/lessons/desain-website-responsif/topics/mengatur-viewport)
+#### Mengatur viewport
+Secara umum viewport adalah daerah pada layar yang menampilkan suatu konten. Dalam konteks kita kali ini, tentu viewport adalah daerah yang menampilkan halaman web yang sedang kita akses. Perlu kalian ingat bahwa ukuran viewport tidak selalu sama dengan resolusi layar perangkat. Untuk membuat halaman website menjadi responsif, maka kita perlu menambahkan meta data `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` ini di dalam element `<head>` di file HTML. Kita bisa menggunakan persentase untuk menentukan lebar suatu element agar sama dengan lebar parent element-nya, contoh `img {width: 50%;}` . Kita bisa menggunakan properti `max-width: 100%` untuk menentukan lebar maksimal dari suatu element, jadi properti max-width itu menentukan batas atas dari lebar suatu element. Suatu teks bisa diatur ukurannya dengan menggunakan vw, yang artinya viewport width. Viewport adalah ukuran lebar window browser. Dengan menggunakan media query, kita bisa mengatur lebar suatu element dan/atau memberikan style lain yang berbeda-beda sesuai dengan ukuran dari browser.
+
