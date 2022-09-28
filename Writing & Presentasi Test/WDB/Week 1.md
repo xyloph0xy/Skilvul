@@ -217,5 +217,14 @@ container adalah element yang membungkus dan mengatur tampilan dari element di d
 ### Properti yang ada pada flexbox
 #### *flex-direction*
 Digunakan untuk menentukan ke arah mana kontainer akan menumpukkan item-item fleksibelnya, nah value-nya dapat berupa:
-1 column (top ke bottom secara vertikal) 
-2 column-reverse (bottom ke top secara vertikal)
+1. column (top ke bottom secara vertikal) 
+2. column-reverse (bottom ke top secara vertikal)
+3. row (left ke right secara horizontal)
+4. row-reverse (right ke left secara horizontal)
+`flex-direction: row;`
+#### *flex-wrap*
+Digunakan untuk menentukan apakah item-item flex perlu dibungkus atau tidak, nah value-nya sebagai berikut :
+1. wrap (membungkus item-item fleksibel) 
+2. nowrap (tanpa membungkus item-item fleksibel) 
+3. wrap-reverse (membungkus itemitem fleksibel secara terbalik)
+`flex-wrap: wrap-reverse;`
