@@ -188,7 +188,14 @@ Ada banyak yang bisa kamu lakukan dengan CSS, salah satunya :
 1. [**BOX MODEL**](https://skilvul.com/courses/css-dasar/lessons/css-box-model/topics/definisi-box-model)
 Jadi, semua HTML element itu dianggap sebagai sebuah kotak (box). Karena hal inilah istilah box model muncul.
 Box model sendiri bisa kalian anggap sebagai kotak yang membungkus setiap HTML element.
+<img src="https://hendky.com/wp-content/uploads/2019/09/box-model.png">
 
 3. [**DISPLAY**](https://skilvul.com/courses/css-dasar/lessons/css-display/topics/display:-none-vs-visibility:-hidden)
-4. [**POSITION**](https://skilvul.com/courses/css-dasar/lessons/css-position/topics/position:-static)
-5. Sebenarnya masih banyak lagi, kamu bisa lihat styling CSS yang lebih lengkap [*disini*](https://www.w3schools.com/css/default.asp)
+Dengan properti display, kita bisa mengatur bagaimana box tersebut ditampilkan: apa box tersebut ditampilkan sebaris dengan box lain? atau satu box menempati satu baris penuh? bahkan kita juga bisa mengatur apakah box tersebut ditampilkan atau disembunyikan. Property display ada 3 nilai :
+  - **Display Blok**, Element yang memiliki properti `display: block;` akan menempati satu baris penuh (atau bahkan beberapa baris) meskipun kontennya tidak sebesar itu.
+  - **Display Inline**, sebuah element akan membuat ukuran box dari element tersebut tidak lagi sebaris penuh seperti dalam kasus `display: block`, melainkan hanya sebesar konten di dalamnya saja.
+  - **Display Inline-Blok**, Berbeda dengan element yang memiliki properti display: inline di mana lebar dan tinggi element tidak dapat kita atur, element dengan `display: inline-block` bisa kita atur lebar dan tingginya.
+
+Berbeda juga dengan element dengan properti  `display: block` yang selalu mengambil penuh ruang dalam satu baris, element dengan `display: inline-block` secara default hanya akan mengambil ruang sebesar konten di dalamnya. Dengan adanya sisa ruang di sebelah kiri atau kanannya, element dengan `display: inline-block` bisa ditempatkan bersebelahan dengan yang lainnya.
+5. [**POSITION**](https://skilvul.com/courses/css-dasar/lessons/css-position/topics/position:-static)
+6. Sebenarnya masih banyak lagi, kamu bisa lihat styling CSS yang lebih lengkap [*disini*](https://www.w3schools.com/css/default.asp)
