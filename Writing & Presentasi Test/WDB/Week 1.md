@@ -155,3 +155,7 @@ Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan 
 5. Pilih repository yang ingin kamu deploy ke netlify, pastikan dalam repository tersebut terdapat file index.html
 6. Klik deploy site
 7. Tunggu hingga proses deploy selesai ^^
+
+
+# **DAY 3 : 21 September 2022**
+
