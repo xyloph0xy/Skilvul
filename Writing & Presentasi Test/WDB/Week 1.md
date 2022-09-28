@@ -221,10 +221,20 @@ Digunakan untuk menentukan ke arah mana kontainer akan menumpukkan item-item fle
 2. column-reverse (bottom ke top secara vertikal)
 3. row (left ke right secara horizontal)
 4. row-reverse (right ke left secara horizontal)
-`flex-direction: row;`
+
 #### *flex-wrap*
 Digunakan untuk menentukan apakah item-item flex perlu dibungkus atau tidak, nah value-nya sebagai berikut :
 1. wrap (membungkus item-item fleksibel) 
 2. nowrap (tanpa membungkus item-item fleksibel) 
 3. wrap-reverse (membungkus itemitem fleksibel secara terbalik)
-`flex-wrap: wrap-reverse;`
+
+#### *flex-flow*
+Digunakan untuk meringkas / menggabungkan nilai dari properti flex-direction dan flex-wrap, contohnya `flex-flow: row wrap;`
+
+#### *justify-content*
+Digunakan untuk meratakan item-item flexibel, contoh value-nya:
+1. center (meratakan item fleksibel ke tengah) 
+2. flex-start (meratakan item-item fleksibel di awal wadah) 
+3. flex-end (meratakan item-item fleksibel di akhir wadah)
+4. space-around (membuat item-item fleksibel dengan spasi sebelum, di antara, dan setelah baris sama rata) 
+5. space-between (menampilkan item-item fleksibel dengan ruang / space di antara garis).
