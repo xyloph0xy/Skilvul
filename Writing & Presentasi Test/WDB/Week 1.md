@@ -238,3 +238,32 @@ Digunakan untuk meratakan item-item flexibel, contoh value-nya:
 3. flex-end (meratakan item-item fleksibel di akhir wadah)
 4. space-around (membuat item-item fleksibel dengan spasi sebelum, di antara, dan setelah baris sama rata) 
 5. space-between (menampilkan item-item fleksibel dengan ruang / space di antara garis).
+# DAY 4: 22 September 2022
+## **ALGORITMA**
+Algoritma adalah sebuah langkah logis dan sistematis yang digunakan untuk menyelesaikan tujuan. 
+### **Apa sih pentingnya belajar Algoritma ?**
+1. Programming itu adalah algoritma dan struktur data
+2. Data struktur digunakan untuk mengelola/manajemen sebuah data
+3. Dan Algoritma yang akan menyelesaikan suatu permasalahan menggunakan data tersebut.
+
+### Algoritma memiliki beberapa ciri-ciri :
+1. input : memiliki masukan 
+2. output : memiliki keluaran
+3. definiteness : tidak ambigu
+4. finiteness : memiliki titik henti
+5. effectivenss : tepat sasaran dan efisien
+
+### Nah kalo jenis Algoritma ada empat, yaitu :
+1. ***sequence***, dilakukan berurutan
+2. ***Selection***, dilakukan jika kondisi terpenuhi
+3. ***iteration***, dilakukan secara berulangkali hingga kondisi terpenuhi
+4. ***concurrent***, dilakukan secara bersamaan
+### Cara penulisan algoritma
+1. Deskriptif, penulisan algoritma menggunakan bahasa sehari-hari
+2. Pseudocode, penulisan algoritma menggunakan campuran bahasa sehari-hari dengan bahasa pemrograman
+<img src="https://aderoni.com/wp-content/uploads/2021/03/Struktur-Penulisan-Pseudocode.jpg" weight="400" height="200">
+4. Flowchart, penulisan algoritma menggunakan diagram alir
+<img src="https://www.99.co/blog/indonesia/wp-content/uploads/2022/01/Contoh-Bagan-Alur-Surga-dan-Neraka.jpg" weight="200" height="500">
+
+
+
