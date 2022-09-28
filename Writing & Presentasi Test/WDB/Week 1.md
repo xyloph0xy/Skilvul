@@ -158,4 +158,17 @@ Salah satu keuntungan menggunakan elemen semantik adalah dokumen HTML kita akan 
 
 
 # **DAY 3 : 21 September 2022**
+## **CSS**
+### CSS itu apa sih ?
+**CSS** adalah singkatan dari **C**ascading **S**tyle **S**heets yang berfungsi untuk mendesain halaman website. Di CSS ini kamu dapat memberi style pada html berupa warna, font, layout, grid, dan lainnya. Ada 3 
+cara penggunaan css, yaitu :
+1. *Inline style* menyisipkan css pada elemen HTML
+2. *Internal style* menggunakan tag `<style> ` untuk menuliskan css, tag tersebut masih berada pada satu file dengan HTML
+3. *Eksternal* dengan cara membuat file baru di luar file HTML kemudian dihubungkan dengan element `<link>` yang terdapat di dalam tag `<head>`
 
+### CSS Syntax itu buat apa ?
+Syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin diberi style. Nah CSS syntax sendiri ada tiga macam :
+<img src="https://curriculum-content.s3.amazonaws.com/fewds/css-syntax.png">
+1. *Selector*, bagian mana yang ingin kamu buat (aku pengen ngasih style ***paragraf***nya nih).
+2. *Property*, kamu pengen apain sih bagian itu (paragrafnya pengen aku kasih ***warna***).
+3. *value*, spesifiknya pengen kamu kasih apa (aku kasih warna ***merah*** aja deh).
