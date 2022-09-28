@@ -205,5 +205,12 @@ Dengan properti display, kita bisa mengatur bagaimana box tersebut ditampilkan: 
 
 ### Membuat Website [Responsive](https://skilvul.com/courses/css-dasar/lessons/desain-website-responsif/topics/mengatur-viewport)
 #### Mengatur viewport
-Secara umum viewport adalah daerah pada layar yang menampilkan suatu konten. Dalam konteks kita kali ini, tentu viewport adalah daerah yang menampilkan halaman web yang sedang kita akses. Perlu kalian ingat bahwa ukuran viewport tidak selalu sama dengan resolusi layar perangkat. Untuk membuat halaman website menjadi responsif, maka kita perlu menambahkan meta data `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` ini di dalam element `<head>` di file HTML. 
+Viewport dalam website adalah daerah yang menampilkan halaman web yang sedang kita akses. Perlu kita ketahui ukuran viewport tidak selalu sama dengan resolusi layar perangkat. Untuk membuat halaman website menjadi responsif, maka kita perlu menambahkan meta data `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` ini di dalam element `<head>` di file HTML. Nah kita bisa menggunakan persentase untuk menentukan lebar suatu element agar sama dengan lebar parent element-nya, contoh `width: 60%;` perintah tersebut dilakukan supaya lebar elemen selalu 60% dibanding lebar parentsnya. Kamu juga bisa menggunakan properti max-width: 100% untuk menentukan lebar maksimal dari suatu element. 
+### Flexbox
+Flexbox adalah sebuah pengaturan elemen pada website beserta item di dalamnya  untuk beradaptasi dengan Parent/Container-nya. 
+
+**Container Dan Item itu apa sih?**
+container adalah element yang membungkus dan mengatur tampilan dari element di dalamnya, sedangkan item adalah element dalam container yang diatur tampilannya.
+
+<img src="https://sharkcoder.com/files/article/flex1.png" weight="600" height="200">
 
