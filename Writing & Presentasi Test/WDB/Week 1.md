@@ -169,6 +169,16 @@ cara penggunaan css, yaitu :
 ### CSS Syntax itu buat apa ?
 Syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin diberi style. Nah CSS syntax sendiri ada tiga macam :
 <img src="https://curriculum-content.s3.amazonaws.com/fewds/css-syntax.png" weight="500" height="100">
-1. *Selector*, bagian mana yang ingin kamu buat (aku pengen ngasih style ***paragraf***nya nih).
-2. *Property*, kamu pengen apain sih bagian itu (paragrafnya pengen aku kasih ***warna***).
-3. *value*, spesifiknya pengen kamu kasih apa (aku kasih warna ***merah*** aja deh).
+1. *Selector*, bagian mana yang ingin kamu buat (aku pengen ngasih style ***PARAGRAF***nya nih).
+2. *Property*, kamu pengen apain sih bagian itu (paragrafnya pengen aku kasih ***WARNA***).
+3. *value*, spesifiknya pengen kamu kasih apa (aku kasih warna ***MERAH*** aja deh).
+
+### Cara pakai [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp) itu gimana ?
+1. Selector tag `Tag{...}` digunakan untuk memberi style berdasar tag
+2. Selector class `.namaClass{...}` digunakan untuk memberi style berdasar kelas
+3. Selector ID `#namaID{...}` digunakan untuk memberi style berdasar ID
+4. Selector atribut `Tag[Atribut]{...}` digunakan untuk memberi style berdasar atribut yang ada di dalam tag
+5. Selector universal`*{...}` digunakan untuk memberi style semua element
+6. Pseudo Selektor digunakan untuk mengakses bagian tertentu dalam HTML yang tidak 'terlihat' (tidak tertulis di dalam HTML) atau bagian dari HTML yang tidak bisa diakses dengan selector sederhana lain. Pseudo selector ada dua macam :
+    - Pseudo-class `selector:pseudo-class:{...}`
+    - pseudo-element `selector::pseudo-element{...}`
