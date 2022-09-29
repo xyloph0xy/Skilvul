@@ -297,7 +297,7 @@ console.log(luasPersegi(5));
 Pada console akan muncul angka 5
 
 
-Nah struktur data pada javascript sendiri terdapat pada method array 
+Nah contoh struktur data pada javascript sendiri terdapat pada method array 
 ```javascript
 let array = [1, 2, 3, "halo", false, true];
 
