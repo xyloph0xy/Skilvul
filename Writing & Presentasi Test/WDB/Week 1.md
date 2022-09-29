@@ -266,8 +266,30 @@ Digunakan untuk meratakan item-item flexibel, contoh value-nya:
 ### Cara penulisan algoritma
 1. Deskriptif, penulisan algoritma menggunakan bahasa sehari-hari
 2. Pseudocode, penulisan algoritma menggunakan campuran bahasa sehari-hari dengan bahasa pemrograman
-<img src="https://aderoni.com/wp-content/uploads/2021/03/Struktur-Penulisan-Pseudocode.jpg" weight="300" height="150">
+><img src="https://aderoni.com/wp-content/uploads/2021/03/Struktur-Penulisan-Pseudocode.jpg" weight="300" height="150">
 4. Flowchart, penulisan algoritma menggunakan diagram alir
-<img src="https://www.99.co/blog/indonesia/wp-content/uploads/2022/01/Contoh-Bagan-Alur-Surga-dan-Neraka.jpg" weight="100" height="300">
+><img src="https://www.99.co/blog/indonesia/wp-content/uploads/2022/01/Contoh-Bagan-Alur-Surga-dan-Neraka.jpg" weight="100" height="300">
+
+Mari kita membuat contoh algoritma membuat fungsi untuk menghitung luas persegi
+1. Deklarasikan fungsi menggunakan parameter s
+2. Kembalikan hasil dengan `s*s`
+3. Tampilkan hasil ke console dengan memanggil fungsi yang memiliki value parameter di dalamnya
+
+Kemudian kita akan coba buat scriptnya menggunakan javascript
+```javascript
+function luasPersegi(s){
+    return s*s;
+}
+console.log(luasPersegi(5));
+```
+Pada console akan muncul angka 5
 
 
+Nah struktur data pada javascript sendiri terdapat pada method array 
+```javascript
+let array = [1, 2, 3, "halo", false, true];
+
+  array.pop();
+
+  console.log(array); // Output: [1, 2, 3, "halo", false]
+  ```
