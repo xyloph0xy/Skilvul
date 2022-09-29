@@ -187,7 +187,13 @@ Syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin d
 Ada banyak yang bisa kamu lakukan dengan CSS, salah satunya :
 1. [**BOX MODEL**](https://skilvul.com/courses/css-dasar/lessons/css-box-model/topics/definisi-box-model)
 Jadi, semua HTML element itu dianggap sebagai sebuah kotak (box). Karena hal inilah istilah box model muncul.
-Box model sendiri bisa kalian anggap sebagai kotak yang membungkus setiap HTML element.
+Box model sendiri bisa kalian anggap sebagai kotak yang membungkus setiap HTML element. Contoh mengatur box model pada sebuah paragraf :
+```css
+p{
+margin : 0px;
+border : 20px 10px;
+padding: 10px;
+```
 >><img src="https://hendky.com/wp-content/uploads/2019/09/box-model.png">
 
 3. [**DISPLAY**](https://skilvul.com/courses/css-dasar/lessons/css-display/topics/display:-none-vs-visibility:-hidden)
@@ -195,11 +201,17 @@ Dengan properti display, kita bisa mengatur bagaimana box tersebut ditampilkan: 
    - **Display Blok**, Element yang memiliki properti `display: block;` akan menempati satu baris penuh (atau bahkan beberapa baris) meskipun kontennya tidak sebesar itu.
    - **Display Inline**, sebuah element akan membuat ukuran box dari element tersebut tidak lagi sebaris penuh seperti dalam kasus `display: block`, melainkan hanya sebesar konten di dalamnya saja.
    - **Display Inline-Blok**, Berbeda dengan element yang memiliki properti display: inline di mana lebar dan tinggi element tidak dapat kita atur, element dengan `display: inline-block` bisa kita atur lebar dan tingginya. Berbeda juga dengan element dengan properti  `display: block` yang selalu mengambil penuh ruang dalam satu baris, element dengan `display: inline-block` secara default hanya akan mengambil ruang sebesar konten di dalamnya. Dengan adanya sisa ruang di sebelah kiri atau kanannya, element dengan `display: inline-block` bisa ditempatkan bersebelahan dengan yang lainnya.
+Contoh apabila kita ingin mengatur display pada tag img
+```css
+img{
+display :inline;
+}
+```
 5. [**POSITION**](https://skilvul.com/courses/css-dasar/lessons/css-position/topics/position:-static), Secara default seluruh properti position dari HTML element memiliki nilai static. Element dengan properti tersebut tidak akan terpengaruh oleh properti top, bottom, left, dan right. Namun kita dapat mengaturnya dengan :
     - `position: relative`, Element dengan posisi relative akan diposisikan relatif dari posisi normalnya. Kita bisa memberikan properti top, right, bottom, dan left pada element dengan posisi relative. Element lain di sekitar element dengan posisi relative tidak akan disesuaikan dengan ruang yang ditinggalkan oleh element.
     - `position: absolute`, Element dengan posisi absolute akan diposisikan relative dengan posisi ancestor terdekat yang posisinya bukan static. Ancestor dari sebuah element merupakan semua element yang berada di tingkat atasnya.
-    - `position: fix`, Element dengan posisi fixed akan diposisikan relatif terhadap viewport browser, di mana akan selalu berada di tempat yang sama jika walaupun halaman website di-scroll.
-    - `position: sticky`, Element dengan posisi sticky akan diposisikan berdasarkan scroll halaman dari user. `position:sticky` pada dasarnya adalah seperti gabungan dari `position:relative` dan `position: fixed`.
+    - `position: fixed`, Element dengan posisi fixed akan diposisikan relatif terhadap viewport browser, di mana akan selalu berada di tempat yang sama jika walaupun halaman website di-scroll.
+    - `position: sticky`, Element dengan posisi sticky akan diposisikan berdasarkan scroll halaman dari user. `position:sticky` pada dasarnya adalah seperti gabungan dari `position:relative` dan `position: fixed`. Untuk melihat hasil dari `position:sticky`, kita setidaknya butuh mengatur salah satu nilai dari properti `top, right, bottom, left`.
 
 7. Sebenarnya masih banyak lagi, kamu bisa lihat styling CSS yang lebih lengkap [*disini*](https://www.w3schools.com/css/default.asp)
 
