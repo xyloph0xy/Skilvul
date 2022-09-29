@@ -305,3 +305,8 @@ let array = [1, 2, 3, "halo", false, true];
 
   console.log(array); // Output: [1, 2, 3, "halo", false]
   ```
+# Day 5:23 September 2022
+## Javascript
+### Apa itu Javascript
+**Javascript** adalah bahasa pemrograman yang digunakan untuk membuat website menjadi lebih dinamis dan interaktif. Secara teknis javascrtpt merupakan bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya. JavaScript memiliki fitur-fitur seperti berorientasi objek, client-side, high-level programming, dan loosely typed.
+Untuk menjalankan Js di browser kita dapat menggunakan inspect (klik kanan) pada browser, kemudian pilih console.
