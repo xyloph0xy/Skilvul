@@ -361,7 +361,7 @@ Looping adalah sekumpulan kode yang akan dijalankan berulang kali sampai batas y
 1. *for*, syntaxnya `for(nilai awal; definisikan kondisi; penambahan/pengurangan){}`
 contoh
 ```javascript
-for(let i = 1; i >= 5; i++){
+for(let i = 1; i <= 5; i++){
 console.log(i)
 }
 ```
