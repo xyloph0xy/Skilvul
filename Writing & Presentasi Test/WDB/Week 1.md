@@ -310,3 +310,29 @@ let array = [1, 2, 3, "halo", false, true];
 ### Apa itu Javascript
 **Javascript** adalah bahasa pemrograman yang digunakan untuk membuat website menjadi lebih dinamis dan interaktif. Secara teknis javascrtpt merupakan bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya. JavaScript memiliki fitur-fitur seperti berorientasi objek, client-side, high-level programming, dan loosely typed.
 Untuk menjalankan Js di browser kita dapat menggunakan inspect (klik kanan) pada browser, kemudian pilih console.
+### Variabel pada javascript
+Variabel adalah tempat untuk menyimpan value, nah value yang dimaksud di sini adalah tipe data. Berikut macam-macam variabel pada javascript
+1. Var
+2. Let 
+3. Const
+
+#### Loh bedanya apa ?
+Pada Js menganut 2 sistem scope, yaitu ***block scope*** dan ***functional scope***. **BLOCK SCOPE** adalah cakupan variabel yang dipisahkan oleh setiap blok `{}`. **Duh maksudnya gimana sih ?** Jadi mudahnya gini semisal kamu sedang membuat perulangan for maka kamu ga bisa akses variabel tersebut di luar for
+```javascript
+for(let i=1; i<6; i++){
+  console.log(i)
+}
+```
+kalo kamu akses let i di luar tanda `{}` maka outputnya error, block scope inilah yang dianut oleh `let` dan `const`.
+Kemudian data pada `const` **TIDAK DAPAT DIUBAH**, sedangkan pada let dan var masih bisa diubah
+
+##### Saran aja nih
+1. Selalu gunakan let atau const jika tidak ingin terjadi kerancuan data/nilai ketika kita mengakses variabel yang ternyata sudah ada di dalam block lain.
+2. Gunakan const ketika datanya cenderung tetap.
+
+
+### Tipe data pada javascript
+1. Integer
+2. Float
+3. String
+4. Boolean
