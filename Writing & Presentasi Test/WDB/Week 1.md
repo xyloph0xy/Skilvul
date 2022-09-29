@@ -326,13 +326,48 @@ for(let i=1; i<6; i++){
 kalo kamu akses let i di luar tanda `{}` maka outputnya error, block scope inilah yang dianut oleh `let` dan `const`.
 Kemudian data pada `const` **TIDAK DAPAT DIUBAH**, sedangkan pada let dan var masih bisa diubah
 
-##### Saran aja nih
-1. Selalu gunakan let atau const jika tidak ingin terjadi kerancuan data/nilai ketika kita mengakses variabel yang ternyata sudah ada di dalam block lain.
+#### Saran aja nih
+1. Selalu gunakan let atau const kalo kamu tidak ingin terjadi kerancuan data/nilai ketika mengakses variabel yang ternyata sudah ada di dalam block lain.
 2. Gunakan const ketika datanya cenderung tetap.
 
 
 ### Tipe data pada javascript
-1. Integer
-2. Float
-3. String
-4. Boolean
+1. *Integer*, bilangan bulat yang bisa dijumlahkan
+2. *Float*, bilangan pecahan yang bisa dijumlahkan
+3. *String*, deretan karakter yang dapat berupa angka dan huruf
+4. *Boolean*, nilai benar dari sebuah pernyataan yang dituliskan sebagai `true` atau `false`
+5. *null*, menunjuk pada nilai yang tidak ada
+6. *symbol*, nilai unik yang dihasilkan tiap kali kita memanggil fungsi Symbol(). Nilai unik ini memiliki beberapa kegunaan seperti memberi nomor identifikasi unik dan berperan sebagai nama properti unik sebuah objek
+7. *objek*, kumpulan pasangan properti dan nilai
+
+### Aturan penamaan variabel
+1. Menggunakan konvensicamelCase, yaitu menggunakan huruf kecil pada permulaan kata, dan jika nama variabel terdiri dari 2 kata atau lebih, maka kata kedua dan berikutnya diawali dengan huruf besar
+2. Nama variabel boleh diawali dengan underscore(_), huruf besar (jika diharuskan), dan $.
+3. Nama variabel tidak diawali dengan angka, @, *, #, !, %, (), -, +.
+4. Tidak boleh menggunakan kata kunci JavaScript seperti boolean, break, else, extends, dan lain-lain.
+5. Antara kata pertama dan kata kedua tidak diberi spasi atau dash(-)
+6. Karena JavaScript bersifat case-sensitive, maka penamaan juga case-sensitive (jadi variabel hitung dengan variabel Hitung itu berbeda).
+
+### Control flow pada javascript
+#### Conditional
+Perintah di conditional  akan dijalankan kalo sudah memenuhi persyaratan yang diminta. Berikut macam-macam seleksi yang terdapat di javascript
+1. `if`, akan di eksekusi kalo kondisi/value yang dimasukkan sesuai dengan persyaratan
+3. `if..else`, else di sini berfungsi untuk mengeksekusi kondisi/value apabila tidak sesuai dengan persyaratan
+4. `if...else if...else`, digunakan untuk mengeksekusi banyak kondisi/value
+5. `switch...case`, digunakan untuk mengeksekusi banyak kondisi/value, biasanya switch...case digunakan untuk menyeleksi kondisi/value bertipe string
+
+#### Looping
+Looping adalah sekumpulan kode yang akan dijalankan berulang kali sampai batas yang ditentukan. Berikut looping yang terdapat di javascript :
+1. *for*, syntaxnya `for(nilai awal; definisikan kondisi; penambahan/pengurangan){}`
+contoh
+```javascript
+for(let i = 1; i >= 5; i++){
+console.log(i)
+}
+```
+3. *for...in*, syntaxnya `for (propertiObjek in namaObjek) {}`  berarti untuk setiap propertiObjek di namaObjek, maka jalankan kode di dalam {}. Variabel propertiObjek bisa diganti dengan nama variabel apapun.
+4. *for...of*, digunakan untuk mengulang setiap element dari objek yang bisa diulang (contoh array atau string). syntaxnya `for (let element of namaVariabel) {}` yang berarti untuk setiap element di namaVariabel, maka jalankan kode di dalam {}. Variabel element bisa diganti dengan nama variabel apapun.
+5. *while* syntaxnya `while (kondisi) {kode yang akan dijalankan ketika kondisi benar (true)}` artinya ketika kondisi yang ditentukan benar (true), maka jalankan semua kode yang ada di dalam {}.
+6. *do...while*, syntaxnya `do {kode yang akan dijalankan ketika kondisi benar (true)} while (kondisi);`. 
+Perbedaan `while` dengan `do...while` adalah `do...while`perintahnya dijalankan terlebih dahulu baru seleksinya, sedangkan `while` kondisinya di seleksi dulu baru dijalankan perintahnya.
+
