@@ -39,7 +39,8 @@ function mainKelereng() {
   console.log(kelereng); // 'hijau'
   
   if(true) {
-    // kelereng di dalam block statement if merupakan variable di dalam block scope yang berbeda dengan variable kelereng di function mainKelereng
+    // kelereng di dalam block statement if merupakan variable di dalam block scope 
+    // yang berbeda dengan variable kelereng di function mainKelereng
     let kelereng = 'biru';
     console.log(kelereng); // 'biru'
   }
@@ -52,4 +53,4 @@ mainKelereng();
 
 console.log(kelereng); // 'merah'
 ```
-
+Variabel pada **local scope dan block scope HANYA DAPAT diakses didalam scope `{}`** itu makanya hasil dari `console.log(kelereng);` yang terakhir adalah merah karena variabel kelereng pada scope global bernilai merah.
