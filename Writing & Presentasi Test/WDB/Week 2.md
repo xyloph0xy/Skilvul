@@ -39,8 +39,7 @@ function mainKelereng() {
   console.log(kelereng); // 'hijau'
   
   if(true) {
-    // kelereng di dalam block statement if merupakan variable di dalam
-    // block scope yang berbeda dengan variable kelereng di function mainKelereng
+    // kelereng di dalam block statement if merupakan variable di dalam block scope yang berbeda dengan variable kelereng di function mainKelereng
     let kelereng = 'biru';
     console.log(kelereng); // 'biru'
   }
