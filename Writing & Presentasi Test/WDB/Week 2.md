@@ -178,9 +178,7 @@ Digunakan untuk menggambarkan data bertipe teks yang inisialisasinya diapit meng
 2. `number`
 JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer, float, short, long seperti pada bahasa pemrograman lain. **Hanya ada number**. Hal unik lainnya dari tipe data number di JavaScript adalah adanya nilai simbolis. Nilai simbolis ini merepresentasikan nilai yang tidak bisa direpresentasikan oleh angka di JavaScript atau nilai yang mustahil. Nilai simbolis ini ada tiga, yaitu, Infinity, -Infinity, dan NaN.
     - infinity dan -infinity
-    Nilai Infinity dan -Infinity merepresentasikan nilai yang berada diluar     jangkauan nilai yang dapat direpresentasikan JavaScript. Nilai Infinity     dapat dihasilkan dengan melakukan beberapa operasi berikut:
-    
->><img src="https://miro.medium.com/max/1100/1*nSwFN7GghkQunln0Mjp5-Q.png" weight= "500" height="200">
+    Nilai Infinity dan -Infinity merepresentasikan nilai yang berada diluar     jangkauan nilai yang dapat direpresentasikan JavaScript. Nilai Infinity     dapat dihasilkan dengan melakukan beberapa operasi berikut:>><img src="https://miro.medium.com/max/1100/1*nSwFN7GghkQunln0Mjp5-Q.png" weight= "500" height="200">
     - NaN
   Nilai NaN digunakan untuk merepresentasikan sebuah nilai numerik yang tidak mungkin atau ilegal. Walaupun NaN merupakan singkatan dari Not a Number. Operasi pada JavaScript yang dapat menghasilkan nilai NaN, yaitu misalkan operasi angka dengan string yang bukan angka, kecuali (+) karena dianggap konkatenasi.
   >><img src="https://miro.medium.com/max/1100/1*UskGTMUSBZzm8nyqHGOtJg.png" weight= "400" height="150">
