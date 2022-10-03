@@ -391,6 +391,8 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
    ```javascript
       document.getElementById("demo").innerHTML = "Hello World!";
    ```
+   innerHTML adalah sebuah atribut di dalam (objek) elemen HTML yang berisi string HTML.
+   Dengan innerHTML, kita dapat menampilkan output ke elemen yang lebih spesifik.
 2. Bagaimana cara mengubah style CSS dari elemen HTML
 3. Bagaimana menganggapi event
 4. Bagaimana menambah atau menghilangkan element
