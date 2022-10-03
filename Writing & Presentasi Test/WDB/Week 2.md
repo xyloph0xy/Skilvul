@@ -394,6 +394,29 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
    innerHTML adalah sebuah atribut di dalam (objek) elemen HTML yang berisi string HTML.
    Dengan innerHTML, kita dapat menampilkan output ke elemen yang lebih spesifik.
 2. Bagaimana cara mengubah style CSS dari elemen HTML
-    scriptnya `element.style.color=""`
+   scriptnya `element.style.color=""`
+   contoh:
+   ```javascript
+      <script>
+      var paragraf = document.getElementsByClassName("paragraf");
+      setInterval(function () {
+        paragraf[0].style.color = "red";
+        paragraf[1].style.color = "green";
+        paragraf[2].style.color = "blue";
+
+            setTimeout(function () {
+            paragraf[0].style.color = "black";
+            paragraf[1].style.color = "black";
+            paragraf[2].style.color = "black";
+            }, 500)
+        }, 1000);
+      </script>
+      ```
+     Kita memanfaatkan fungsi setInterval() dan fungsi setTimeOut() untuk menentukan waktu animasinya.
+
+Pada kode diatas, rentang waktu (interval) kita berikan 1000 milidetik atau 1 detik.
+
+Sedangkan untuk merubah warnanya menjadi hitam, kita berikan waktu 500 milidetik atau 0.5 detik.
+      
 3. Bagaimana menganggapi event
 4. Bagaimana menambah atau menghilangkan element
