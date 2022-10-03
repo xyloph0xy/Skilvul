@@ -176,12 +176,13 @@ Yang terjadi sebetulnya adalah JavaScript membuat sebuah nilai baru kemudian dia
 1. **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 Digunakan untuk menggambarkan data bertipe teks yang inisialisasinya diapit menggunakan `'...'` atau `"..."`. Setiap elemen dalam String menempati posisi dalam String. Elemen pertama berada pada indeks 0, berikutnya pada indeks 1, dan seterusnya. Panjang dari sebuah String adalah jumlah elemen di dalamnya.
 Di dalam string terdapat beberapa method yang dapat digunakan untuk membantu developer, antara lain :
-   -`charAt()`, digunakan untuk mengakses karakter pada string
+   -`charAt()`, 
+   digunakan untuk mengakses karakter pada string
    ```javascript
    var nama="Luluk";
-console.log(nama.charAt(3));
-//u
-```
+   console.log(nama.charAt(3));
+   //u
+   ```
    - `includes()`
     Metode includes()ini melakukan pencarian (case-sensitive) untuk menentukan apakah satu string dapat ditemukan di dalam string lain
       ```javascript
