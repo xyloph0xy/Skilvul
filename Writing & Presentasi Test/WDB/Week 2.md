@@ -309,4 +309,24 @@ Math.LOG10E   // returns base 10 logarithm of E
 ***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM ini javascript dapat mengubah struktur HTML. 
 Terdapat 2 item apabila kita ingin mengakses DOM
 1. element, contoh element `<h1>Hallo</h1>`
-2. node, merupakan bagian-bagian terkecil dari HTML <img src="https://www.tutorialstonight.com/assets/articles/node-structure-in-dom.webp" weight="500" height="300">
+2. node, merupakan bagian-bagian terkecil dari HTML 
+<img src="https://www.tutorialstonight.com/assets/articles/node-structure-in-dom.webp" weight="500" height="300">
+
+### Traversing DOM
+1. traversing ke bawah
+   - `getElementById`
+     Digunakan untuk mengakses element berdasar id. Cara mengaksesnya yaitu buat variabel untuk menampung DOM terlebih dahulu, contoh
+     ```javascript
+     let title1= document.getElementById("title");
+     console.log(title1);
+     ```
+   - getElementByClassName
+   - getElementByTagName
+   - querySelector family
+   - children
+3. traversing ke atas
+   - paramentElement
+   - closest()
+5. traversing ke samping
+   - nextElemenSibling
+   - previousElementSibling
