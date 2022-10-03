@@ -412,11 +412,24 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
         }, 1000);
       </script>
       ```
-     Kita memanfaatkan fungsi setInterval() dan fungsi setTimeOut() untuk menentukan waktu animasinya.
-
-Pada kode diatas, rentang waktu (interval) kita berikan 1000 milidetik atau 1 detik.
-
-Sedangkan untuk merubah warnanya menjadi hitam, kita berikan waktu 500 milidetik atau 0.5 detik.
+     Kita memanfaatkan fungsi setInterval() dan fungsi setTimeOut() untuk menentukan waktu animasinya. Pada kode diatas, rentang waktu (interval) kita berikan 1000 milidetik atau 1 detik. Sedangkan untuk merubah warnanya menjadi hitam, kita berikan waktu 500 milidetik atau 0.5 detik.
       
 3. Bagaimana menganggapi event
-4. Bagaimana menambah atau menghilangkan element
+   
+4. Bagaimana menambah element
+   ```javascript
+      document.createElement('p');
+      ```
+    Maka, akan tercipta elemen <p> baru. Namun tidak akan ditampilkan ke dalam halaman web. Karena kita belum menambahkannya ke dalam body dokumen. Cara menambahkannya ke body dokumen, kita bisa gunakan fungsi `append()`.
+```javascript
+      <script>
+        // membuat element h1
+        var judul = document.createElement("h1");
+        
+        // mengisi kontent elemen
+        judul.textContent = "Belajar Javascript";
+
+        // menambahkan elemen ke dalam tag body
+        document.body.append(judul);
+    </script>
+      ```
