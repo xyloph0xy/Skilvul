@@ -155,10 +155,32 @@ console.log(result); // 421
 ```
 Output dari program di atas bukan error, melainkan akan dialihkan menjadi String.
 ### Data Type
+JavaScript memiliki sifat loosely types sehingga dalam mendeklarasikan variable kita tidak perlu mendeklarasikan tipe datanya. Tipe data akan otomatis dideteksi oleh JavaScript saat variabel tersebut diberikan suatu nilai. Oleh karena itu, pada JavaScript suatu variabel yang sudah dideklarasikan namun belum diberikan nilai memiliki tipe data undefined karena belum didefinisikan/diberikan nilai. Kemudian dalam javascript terdapat 2 type data yaitu primitive dan non-primitive. 
+
+***BEDANYA APA SIH ?***
+
+Tipe data primitif memiliki sifat immutable dan tidak memiliki properties sementara tipe data non-primitif bersifat mutable dan memiliki properties.
+Maksud dari immutable itu setelah pertama kali diinisiasi, nilai tersebut tidak bisa diubah lagi dalam memori. Nilai yang tersimpan dalam memori akan tetap sama seperti pertama kali.
+**Loh terus script di bawah ini gimana dong ??**
+```javascript
+var nama = "Luluk";
+console.log(nama);
+
+nama = "Luluk Sofiyah";
+console.log(nama);
+//VM347:2 Luluk
+//VM347:5 Luluk Sofiyah
+```
+Yang terjadi sebetulnya adalah JavaScript membuat sebuah nilai baru kemudian diassign ke variabel yang dituju. Jika variabel sebelumnya memiliki nilai, maka nilai tersebut akan digantikan oleh nilai baru tadi. Variabel akan menunjuk ke nilai baru tersebut. Kemudian tipe data primitf tidak memiliki property. Hanya Object yang memiliki property. Secara sederhana, property merupakan variabel yang yang dimiliki oleh object. 
 #### Primitive
 1. `String`
-Digunakan untuk menggambarkan data bertipe teks. Setiap elemen dalam String menempati posisi dalam String. Elemen pertama berada pada indeks 0, berikutnya pada indeks 1, dan seterusnya. Panjang dari sebuah String adalah jumlah elemen di dalamnya.
-2. 
+Digunakan untuk menggambarkan data bertipe teks yang inisialisasinya diapit menggunakan `'...'` atau `"..."`. Setiap elemen dalam String menempati posisi dalam String. Elemen pertama berada pada indeks 0, berikutnya pada indeks 1, dan seterusnya. Panjang dari sebuah String adalah jumlah elemen di dalamnya.
+2. `number`
+JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer, float, short, long seperti pada bahasa pemrograman lain. **Hanya ada number**. Hal unik lainnya dari tipe data number di JavaScript adalah adanya nilai simbolis. Nilai simbolis ini merepresentasikan nilai yang tidak bisa direpresentasikan oleh angka di JavaScript atau nilai yang mustahil. Nilai simbolis ini ada tiga, yaitu, Infinity, -Infinity, dan NaN.
+  - infinity dan -infinity
+    Nilai Infinity dan -Infinity merepresentasikan nilai yang berada diluar     jangkauan nilai yang dapat direpresentasikan JavaScript. Nilai Infinity     dapat dihasilkan dengan melakukan beberapa operasi berikut:
+    <img src="https://miro.medium.com/max/1100/1*nSwFN7GghkQunln0Mjp5-Q.png" weight= "200" height="100">
+  - NaN
 #### Non-Primitive
 ##### Type of
 Digunakan untuk mengecek sebuah tipe data, misal
