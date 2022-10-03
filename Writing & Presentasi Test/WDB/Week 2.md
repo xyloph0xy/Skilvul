@@ -140,19 +140,27 @@ restParam(1,2,3,4,5,6);
 # DAY 7: 27 September 2022
 ## Data Type Built in Prototype & Method
 ***DINAMIC AND WEAK LANGUAGE***
-Bahasa pemrograman java tidak memiliki peraturan yang ketat dalam penulisannya, mungkin di awal variabel foo bernilai "42", kemudian variabel a valuenya diganti menjadi "bar", maka tidak akan ada masalah dengan itu
+**Dinamic** disini berarti bahasa pemrograman java tidak memiliki peraturan yang ketat dalam penulisannya, mungkin di awal variabel foo bernilai "42", kemudian variabel a valuenya diganti menjadi "bar", maka tidak akan ada masalah dengan itu
 ```javascript
 let foo = 42; // foo is now a number
 foo = "bar"; // foo is now a string
 foo = true; // foo is now a boolean
 ```
 Hal di atas bisa di atasi dengan typescript.
+Kemudian bagaimana dengan **Weak** ? mari kita lihat contoh di bawah ini. 
+``` javascript
+const foo = 42; // foo is a number
+const result = foo + "1"; // JavaScript coerces foo to a string, so it can be concatenated with the other operand
+console.log(result); // 421
+```
+Output dari program di atas bukan error, melainkan akan dialihkan menjadi String.
 ### Data Type
 #### Primitive
-1. String
-Digunakan untuk menggambarkan data bertipe teks
+1. `String`
+Digunakan untuk menggambarkan data bertipe teks. Setiap elemen dalam String menempati posisi dalam String. Elemen pertama berada pada indeks 0, berikutnya pada indeks 1, dan seterusnya. Panjang dari sebuah String adalah jumlah elemen di dalamnya.
+2. 
 #### Non-Primitive
-#### Type of
+##### Type of
 Digunakan untuk mengecek sebuah tipe data, misal
 ```javascript
 let = "hewan"
