@@ -204,8 +204,7 @@ JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer,
     - `infinity dan -infinity`
     Nilai Infinity dan -Infinity merepresentasikan nilai yang berada diluar     jangkauan nilai yang dapat direpresentasikan JavaScript. Nilai Infinity     dapat dihasilkan dengan melakukan beberapa operasi berikut:>><img src="https://miro.medium.com/max/1100/1*nSwFN7GghkQunln0Mjp5-Q.png" weight= "500" height="200">
     - `NaN`
-    Nilai NaN digunakan untuk merepresentasikan sebuah nilai numerik yang tidak mungkin atau ilegal. Walaupun NaN merupakan singkatan dari Not a Number. Operasi pada JavaScript yang dapat menghasilkan nilai NaN, yaitu misalkan operasi angka dengan string yang bukan angka, kecuali (+) karena dianggap konkatenasi.
-  >><img src="https://miro.medium.com/max/1100/1*UskGTMUSBZzm8nyqHGOtJg.png" weight= "400" height="150">
+    Nilai NaN digunakan untuk merepresentasikan sebuah nilai numerik yang tidak mungkin atau ilegal. Walaupun NaN merupakan singkatan dari Not a Number. Operasi pada JavaScript yang dapat menghasilkan nilai NaN, yaitu misalkan operasi angka dengan string yang bukan angka, kecuali (+) karena dianggap konkatenasi.<img src="https://miro.medium.com/max/1100/1*UskGTMUSBZzm8nyqHGOtJg.png" weight= "400" height="150">
   Operasi aritmatika yang menghasilkan NaN bisa membuat kita repot karena mungkin kita tidak mengekspektasikan hal tersebut terjadi dan mungkin menimbulkan bug. JavaScript menyediakan function isNaN() untuk mendeteksi apakah parameter yang diberikan merupakan NaN atau bukan. Function isNaN() akan mengembalikan true jika parameter yang diberikan bukan angka dan akan mengembalikan false jika parameter yang diberikan merupakan angka.
   
 
