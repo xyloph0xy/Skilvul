@@ -173,7 +173,7 @@ console.log(nama);
 ```
 Yang terjadi sebetulnya adalah JavaScript membuat sebuah nilai baru kemudian diassign ke variabel yang dituju. Jika variabel sebelumnya memiliki nilai, maka nilai tersebut akan digantikan oleh nilai baru tadi. Variabel akan menunjuk ke nilai baru tersebut. Kemudian tipe data primitf tidak memiliki property. Hanya Object yang memiliki property. Secara sederhana, property merupakan variabel yang yang dimiliki oleh object. 
 #### Primitive
-1. **String**
+1. **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 Digunakan untuk menggambarkan data bertipe teks yang inisialisasinya diapit menggunakan `'...'` atau `"..."`. Setiap elemen dalam String menempati posisi dalam String. Elemen pertama berada pada indeks 0, berikutnya pada indeks 1, dan seterusnya. Panjang dari sebuah String adalah jumlah elemen di dalamnya.
 Di dalam string terdapat beberapa method yang dapat digunakan untuk membantu developer, antara lain :
    -`charAt()`, digunakan untuk mengakses karakter pada string
@@ -184,12 +184,21 @@ console.log(nama.charAt(3));
 ```
    - `includes()`
     Metode includes()ini melakukan pencarian (case-sensitive) untuk menentukan apakah satu string dapat ditemukan di dalam string lain
-    ```javascript
-    var nama="Luluk Sofiyah";
-console.log(nama.includes("Luluk"));
-VM453:2 true
-```
-   - j
+      ```javascript
+      var nama="Luluk Sofiyah";
+      console.log(nama.includes("Luluk"));
+      VM453:2 true
+      ```
+   - `split()` digunakan untuk memisahkan string pada kumpulan string
+      ```javascript
+      var nama = "Luluk sofiyah";
+      console.log(nama.split(" "));
+      'Luluk', 'sofiyah']
+      0: "Luluk"
+      1: "sofiyah"
+      length: 2
+      ```
+   - 
 2. **number**
 JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer, float, short, long seperti pada bahasa pemrograman lain. **Hanya ada number**. Hal unik lainnya dari tipe data number di JavaScript adalah adanya nilai simbolis. Nilai simbolis ini merepresentasikan nilai yang tidak bisa direpresentasikan oleh angka di JavaScript atau nilai yang mustahil. Nilai simbolis ini ada tiga, yaitu, Infinity, -Infinity, dan NaN.
     - `infinity dan -infinity`
@@ -198,20 +207,21 @@ JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer,
     Nilai NaN digunakan untuk merepresentasikan sebuah nilai numerik yang tidak mungkin atau ilegal. Walaupun NaN merupakan singkatan dari Not a Number. Operasi pada JavaScript yang dapat menghasilkan nilai NaN, yaitu misalkan operasi angka dengan string yang bukan angka, kecuali (+) karena dianggap konkatenasi.
   >><img src="https://miro.medium.com/max/1100/1*UskGTMUSBZzm8nyqHGOtJg.png" weight= "400" height="150">
   Operasi aritmatika yang menghasilkan NaN bisa membuat kita repot karena mungkin kita tidak mengekspektasikan hal tersebut terjadi dan mungkin menimbulkan bug. JavaScript menyediakan function isNaN() untuk mendeteksi apakah parameter yang diberikan merupakan NaN atau bukan. Function isNaN() akan mengembalikan true jika parameter yang diberikan bukan angka dan akan mengembalikan false jika parameter yang diberikan merupakan angka.
+  
 
-3. **Boolean**
+3. **boolean**
 Tipe data boolean merepresentasikan entitas logika. ‘boolean’ dapat merepresentasikan nilai benar atau salah, satu atau nol. Tipe data ‘boolean’ biasanya digunakan untuk merepresentasikan data yang hanya memiliki dua kemungkinan nilai. Tipe data ‘boolean’ sering digunakan oleh beberapa statement seperti if, for, while, switch, dsb untuk menentukan kode mana yang akan dijalankan.
 
 4. **null**
 Tipe data ‘null’ merepresentasikan ‘tidak memiliki nilai apapun’. Variabel yang memiliki nilai null menandakan bahwa variabel tersebut tidak menunjuk pada object/nilai apapun. Gunakan null untuk memberikan nilai pada suatu variabel yang belum memiliki nilai tertentu diawal program namun diekspektasikan memi
 
-5. **Undefined**
+5. **undefined**
 Pada saat pertama kali dideklarasikan variabel akan berisi ‘undefined’ sebelum kemudian digantikan oleh nilai yang diberikan. Kata ‘undefined’ di JavaScript bukan merupakan reserved word. Apa artinya? Kita bisa menggunakan kata ‘undefined’ sebagai nama variabel! Namun kita tidak bisa menggunakannya pada scope global. Kenapa? karena sebenarnya undefined merupakan salah satu property dari global object. Sehingga jika digunakan sebagai nama variabel pada scope global akan tetap bernilai undefined.
 
-6. **BigInt**
+6. **bigInt**
 bigint artinya bilangan decimal yang besar. Bigint adalah integer presisi yang mampu mewakili bilangan bulat uang lebih besar dari 253 -1. Di bigInt kamu bisa menyimpan dan mengoperasikan bilangan bulat besar bahkan di luar batas bilangan bulat. Jika hanya mengandalkan tipe data number/integer maka maksimal penggunaan 9007199254740992. Apabila jumlahnya melebihi dari 9007199254740992, integer tidak mendukung.
 
-7. **Symbol**
+7. **symbol**
 Tujuan dari penggunaan fungsi symbol adalah untuk melakukan identifikasi property pada objek dikarenakan tipe data symbol bersifat unik. Symbol memiliki ciri yaitu tidak dapat di konversi dalam sebagai string. Meskipun hampir semua tipe data mendukung secara implisit untuk di konversi sebagai string dengan bantuan fungsi alert() akan tetapi Symbol tidak dapat melakukannya.
 ##### Type of
 Digunakan untuk mengecek sebuah tipe data, misal
@@ -228,3 +238,48 @@ Pada JavaScript, jika suatu tipe data bukan termasuk primitif maka dapat dipasti
 Klasifikasi tipe data object dibagi menjadi dua yaitu Function, Array dan Object.
 2. Arrays
 3. Functionn
+
+#### [**Math**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id) pada javascript
+Objek Math adalah objek yang berisi fungsi-fungsi matematika dan beberapa konstanta untuk melakukan perhitungan matematika seperti sin, cos, tan, eksponen, akar kuadrat, dll.
+1. Fungsi trigonometri (sin,cos,tan)
+```javascript
+Math.sin(10);
+-0.5440211108893698
+```
+3. Fungsi pembulatan
+- `floor()` membulatkan ke bawah;
+- `round()` membulatkan ke yang terdekat, bisa ke bawah dan ke atas;
+- `ceil()` membulatkan ke atas.
+```javascript
+Math.floor(2.7)
+//2
+```
+5. Fungsi logaritma, pangkat, dan eksponensial
+- `log()` untuk menghitung logaritma
+- `pow()` untuk menghitung pemangkatan
+- `exp()` untuk menghitung eksponen
+```javascript
+Math.pow(2,3)
+//8
+```
+7. Fungsi akar `sqrt()`
+```javascript
+Math.sqrt(225)
+//15
+```
+9. Fungsi min dan max
+```javascript
+Math.min(1,8,2,9)
+//1
+```
+11. Konatanta
+```javascript
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E 
+```
