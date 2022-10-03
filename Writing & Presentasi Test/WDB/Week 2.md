@@ -198,7 +198,6 @@ console.log(nama.charAt(3));
       1: "sofiyah"
       length: 2
       ```
-   - 
 2. **number**
 JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer, float, short, long seperti pada bahasa pemrograman lain. **Hanya ada number**. Hal unik lainnya dari tipe data number di JavaScript adalah adanya nilai simbolis. Nilai simbolis ini merepresentasikan nilai yang tidak bisa direpresentasikan oleh angka di JavaScript atau nilai yang mustahil. Nilai simbolis ini ada tiga, yaitu, Infinity, -Infinity, dan NaN.
     - `infinity dan -infinity`
