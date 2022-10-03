@@ -136,6 +136,19 @@ restParam(1,2,3,4,5,6);
 //VM592:2 angka 1:  1
 //VM592:3 angkaSetelahnya:  (5) [2, 3, 4, 5, 6]
 ```
+## Error
+Macam-macam error :
+1. `EvalError`, kesalahan terkait fungsi global
+2. `RangeError`, kesalahan saat variabel numerik atau parameter tidak valid
+3. `ReferenceError`, kesalahan saat mereferensikan referensi yang tidak valid
+4. `SyntaxError`, terdapat kesalahan pada syntax
+5. `TypeError`, terdapat kesalahan pada tipe data variabel atau parameter
+6. `URIError`, terjadi saat `encodeURI()` atau `decodeURI()` melewati parameter yang tidak valid
+7. `AgregateError`, kesalahan yang dibungkus dalam satu kesalahan ketika beberapa kesalahan perlu dilaporkan oleh suatu operasi, misalnya oleh `Promise.any()`.
+8. `InternalError`, kesalahan yang terjadi saat kesalahan internal di mesin JavaScript dilemparkan. contoh terlalu banyak rekursi
+
+
+
 
 # DAY 7: 27 September 2022
 ## Data Type Built in Prototype & Method
