@@ -304,4 +304,9 @@ Math.LN10     // returns the natural logarithm of 10
 Math.LOG2E    // returns base 2 logarithm of E
 Math.LOG10E   // returns base 10 logarithm of E 
 ```
-# DAY 3: 27 September 2022
+# DAY 3-5: 27-29 September 2022
+## DOM Manipulation
+***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM ini javascript dapat mengubah struktur HTML. 
+Terdapat 2 item apabila kita ingin mengakses DOM
+1. element, contoh element `<h1>Hallo</h1>`
+2. node, merupakan bagian-bagian terkecil dari HTML <img src="https://www.researchgate.net/profile/Jian-Chang-8/publication/254002847/figure/fig1/AS:298235726974978@1448116346303/Example-of-DOM-Node-Tree.png" weight="400" height="200">
