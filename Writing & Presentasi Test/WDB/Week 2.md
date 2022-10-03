@@ -309,4 +309,4 @@ Math.LOG10E   // returns base 10 logarithm of E
 ***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM ini javascript dapat mengubah struktur HTML. 
 Terdapat 2 item apabila kita ingin mengakses DOM
 1. element, contoh element `<h1>Hallo</h1>`
-2. node, merupakan bagian-bagian terkecil dari HTML <img src="https://www.researchgate.net/profile/Jian-Chang-8/publication/254002847/figure/fig1/AS:298235726974978@1448116346303/Example-of-DOM-Node-Tree.png" weight="400" height="200">
+2. node, merupakan bagian-bagian terkecil dari HTML <img src="https://www.tutorialstonight.com/assets/articles/node-structure-in-dom.webp" weight="300" height="200">
