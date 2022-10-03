@@ -96,7 +96,7 @@ console.log(berkenalan()); // Output: Hallo, nama saya Sarah.
 console.log() hanya menampilkan informasi ke dalam tab console JavaScript, 
 sedangkan return akan mengembalikan sebuah nilai ke tempat di mana fungsi itu dipanggil.
 
-Di dalam javascript ada sebuah ***argument dan parameter***, apalagi tuh ??
+### Di dalam javascript ada sebuah ***argument dan parameter***, apalagi tuh ??
 ***ARGUMENT*** adalah nilai yang diteruskan ke dalam sebuah fungsi ketika fungsi itu dipanggil, sedangkan ***PARAMETER*** adalah variabel yang terdaftar menjadi bagian dari definisi fungsi
 ```javascript
 function testArgument(parameter1, parameter2, parameter3){
@@ -136,3 +136,28 @@ restParam(1,2,3,4,5,6);
 //VM592:2 angka 1:  1
 //VM592:3 angkaSetelahnya:  (5) [2, 3, 4, 5, 6]
 ```
+
+# DAY 7: 27 September 2022
+## Data Type Built in Prototype & Method
+***DINAMIC AND WEAK LANGUAGE***
+Bahasa pemrograman java tidak memiliki peraturan yang ketat dalam penulisannya, mungkin di awal variabel foo bernilai "42", kemudian variabel a valuenya diganti menjadi "bar", maka tidak akan ada masalah dengan itu
+```javascript
+let foo = 42; // foo is now a number
+foo = "bar"; // foo is now a string
+foo = true; // foo is now a boolean
+```
+Hal di atas bisa di atasi dengan typescript.
+### Data Type
+#### Primitive
+1. String
+Digunakan untuk menggambarkan data bertipe teks
+#### Non-Primitive
+#### Type of
+Digunakan untuk mengecek sebuah tipe data, misal
+```javascript
+let = "hewan"
+typeof hewan
+'string' // hasilnya dalah string
+```
+
+#### Non Primitive
