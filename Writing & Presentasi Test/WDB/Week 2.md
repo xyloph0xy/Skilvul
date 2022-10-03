@@ -306,8 +306,8 @@ Math.LOG10E   // returns base 10 logarithm of E
 ```
 # DAY 3-5: 27-29 September 2022
 ## [**DOM Manipulation**](https://www.javascripttutorial.net/javascript-dom/)
-***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM, javascript dapat mengubah struktur HTML. Pada model DOM ini juga, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root (elemen <html>), elemen root terdiri dari elemen <head> dan elemen <body>, elemen <body> boleh jadi terdiri dari elemen <a>, <h1>, <p>, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri.
-#### Di DOM bisa apa aja sih ?
+***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM, javascript dapat mengubah struktur HTML. Pada model DOM ini juga, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root `(elemen <html>)`, elemen root terdiri dari elemen `<head>` dan elemen `<body>`, elemen `<body>` boleh jadi terdiri dari elemen `<a>`, `<h1>`, `<p>`, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri.
+### Di DOM bisa apa aja sih ?
 - Javascript dapat merubah setiap elemen HTML pada halaman web.
 - Javascript dapat merubah setiap atribut HTML pada halaman web.
 - Javascript dapat merubah setiap style CSS pada halaman web.
@@ -433,3 +433,34 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
         document.body.append(judul);
       </script>
       ```
+## [Event](https://www.petanikode.com/javascript-event/) di Javascript
+Event adalah kejadian yang terjadi di halaman web. Kejadian yang dimaksud di sini seperti aktivitas yang dikerjakan pada halaman web.
+Misalnya seperti:
+1. User melakukan scroll;
+2. User melakukan klik pada elemen tertentu;
+3. Halaman web di-load;
+4. Form di-submit;
+5, dan sebagainya.
+Kita bisa melakukan aksi tertentu untuk merespon event tersebut. Misalnya, Saat elemen <button> diklik, kita bisa jalankan fungsi untuk melakukan sesuatu.
+
+### Cara Handle Event
+1. Menggunakan attribute
+   HTML memiliki atribut event untuk menentukan fungsi yang akan dijalankan saat event terjadi. onclick adalah atribut HTML untuk menentukan aksi saat event klik pada sebuah elemen. Atribut ini bisa diisi dengan nama fungsi atau ekspresi javascript. Selain event onclick ada juga event lainnya seperti onchange, onmouseover, onkeyup, onload, [dll](https://developer.mozilla.org/en-US/docs/Web/Events).
+2. Menggunakan method addEventListener
+  <img src="https://www.petanikode.com/img/javascript-event/method-add-eventlistener.avif" weight="300" height="150">
+  Penulisan nama event ditulis tanpa menggunakan on. Jadi, misalnya kita ingin menghandle event klik, maka cukup tulis click saja. 
+### Handle event di Javascript ada apa aja sih ?
+1. Event Click
+   Event klik termasuk dalam Mouse Event, karena pemicunya adalah aktivitas klik dari mouse atau tap (jika di HP). Kita bisa memberikan aksi tertentu saat terjadi klik, misalnya menampilkan dialog `alert()`. Selain event click ada juga event `dblclick` untuk double klik.
+2. Selain diklik, berikut ini event yang bisa terjadi karena mouse:
+   - `mouseover` (hover) saat pointer berada di atas element;
+   - `mouseenter` saat pointer mendekat pada elemen;
+   - `mouseout` saat pointer menjauh dari elemen;
+3. Event keyboard
+   Berikut ini beberapa event yang bisa terjadi saat kita menekan keyboard:
+   - `keypress`: kejadian saat kita menekan dan menahan tombol tertentu;
+   - `keyup`: kejadian saat kita berhenti menekan (melepas) tombol tertentu;
+   - `keydown`: kejadian saat kita mulai menekan tombol tertentu;
+ 4. Event change
+    Event change biasanya terjadi pada elemen input seperti input text, radio, checkbox, select-option, dll. Event change akan terjadi saat nilai pada elemen tersebut berubah.
+ 5. dll
