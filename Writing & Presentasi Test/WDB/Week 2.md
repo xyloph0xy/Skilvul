@@ -329,23 +329,27 @@ Terdapat 2 item apabila kita ingin mengakses DOM
      console.log(title1);
      ```
      apabila element tidak ada maka return nya null. Jika dokumen HTML memiliki beberapa elemen dengan id yang sama, document.getElementById()metode mengembalikan elemen pertama yang ditemuinya.
+     
 2. `getElementByName`
 semua element padaa HTML document bisa memiliki atribut name, contoh
 ```javascript
 <input type="radio" name="language" value="JavaScript">
 ```
 Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
+
 3. `getElementByClassName`
      ```javascript
       let list = document.getElementsByClassName("list")
       console.log(list)
       ```
    getElementsByClassName akan mereturn dalam bentuk collection element berdasar nama kelasnya (hampir sama seperti array), maka pemanggilannya bisa menggunkaan index `console.log(list[1])`
+   
 4. `getElementsByTagName`
        ```javascript
         let  paragraf= document.getElementsByTagName("p")
         console.log(paragraf)
        ```
+       
  5. `querySelector`
      querySelector() adalah selector yang digunakan untuk memilih sebuah elemen. Pemilihan elemen bisa berdasarkan id, class, name, atau property lainnya.
       ```javascript
@@ -446,21 +450,27 @@ Kita bisa melakukan aksi tertentu untuk merespon event tersebut. Misalnya, Saat 
 ### Cara Handle Event
 1. Menggunakan attribute
    HTML memiliki atribut event untuk menentukan fungsi yang akan dijalankan saat event terjadi. onclick adalah atribut HTML untuk menentukan aksi saat event klik pada sebuah elemen. Atribut ini bisa diisi dengan nama fungsi atau ekspresi javascript. Selain event onclick ada juga event lainnya seperti onchange, onmouseover, onkeyup, onload, [dll](https://developer.mozilla.org/en-US/docs/Web/Events).
+  
 2. Menggunakan method addEventListener
-  <img src="https://www.petanikode.com/img/javascript-event/method-add-eventlistener.avif" weight="300" height="150">
   Penulisan nama event ditulis tanpa menggunakan on. Jadi, misalnya kita ingin menghandle event klik, maka cukup tulis click saja. 
+  
 ### Handle event di Javascript ada apa aja sih ?
+  
 1. Event Click
    Event klik termasuk dalam Mouse Event, karena pemicunya adalah aktivitas klik dari mouse atau tap (jika di HP). Kita bisa memberikan aksi tertentu saat terjadi klik, misalnya menampilkan dialog `alert()`. Selain event click ada juga event `dblclick` untuk double klik.
+  
 2. Selain diklik, berikut ini event yang bisa terjadi karena mouse:
   - `mouseover` (hover) saat pointer berada di atas element;
   - `mouseenter` saat pointer mendekat pada elemen;
   - `mouseout` saat pointer menjauh dari elemen;
+  
 3. Event keyboard
    Berikut ini beberapa event yang bisa terjadi saat kita menekan keyboard:
   - `keypress`: kejadian saat kita menekan dan menahan tombol tertentu;
   - `keyup`: kejadian saat kita berhenti menekan (melepas) tombol tertentu;
   - `keydown`: kejadian saat kita mulai menekan tombol tertentu;
+  
 4. Event change
     Event change biasanya terjadi pada elemen input seperti input text, radio, checkbox, select-option, dll. Event change akan terjadi saat nilai pada elemen tersebut berubah.
+  
 5. dll
