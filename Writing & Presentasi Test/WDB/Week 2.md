@@ -306,7 +306,16 @@ Math.LOG10E   // returns base 10 logarithm of E
 ```
 # DAY 3-5: 27-29 September 2022
 ## [**DOM Manipulation**](https://www.javascripttutorial.net/javascript-dom/)
-***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM ini javascript dapat mengubah struktur HTML. 
+***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM, javascript dapat mengubah struktur HTML. Pada model DOM ini juga, setiap elemen html dipandang sebagai sebuah object. Setiap object bisa terdiri dari object-object lain, sama halnya dengan dokumen html yang terdiri dari elemen root (elemen <html>), elemen root terdiri dari elemen <head> dan elemen <body>, elemen <body> boleh jadi terdiri dari elemen <a>, <h1>, <p>, dst. Elemen-elemen pada dokumen html membentuk sebuah object document yang merupakan object dari dokumen html itu sendiri.
+#### Di DOM bisa apa aja sih ?
+- Javascript dapat merubah setiap elemen HTML pada halaman web.
+- Javascript dapat merubah setiap atribut HTML pada halaman web.
+- Javascript dapat merubah setiap style CSS pada halaman web.
+- Javascript dapat menghilangkan elemen dan atribut HTML yang ada.
+- Javascript dapat menambahkan elemen dan atribut HTML baru.
+- Javascript dapat bereaksi pada setiap event yang ada pada halaman web.
+- Javascript dapat membuat event baru pada halaman web.
+  
 Terdapat 2 item apabila kita ingin mengakses DOM
 1. element, contoh element `<h1>Hallo</h1>`
 2. node, merupakan bagian-bagian terkecil dari HTML 
@@ -339,12 +348,13 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
        ```
   5. `querySelector`
      querySelector() adalah selector yang digunakan untuk memilih sebuah elemen. Pemilihan elemen bisa berdasarkan id, class, name, atau property lainnya.
- ```javascript
-    var tag_p = document.querySelector("p");// berdasar tag
-    var id_a = document.querySelector("#a");// berdasar id
-    var class_a = document.querySelector(".a");//berdasar class
-    var name_a = document.querySelector("[name='a']");//berdasar nameClass
-    var onclick_contoh = document.querySelector("[onclick='contoh()']");//berdasar properti onclick
+      ```javascript
+      var tag_p = document.querySelector("p");// berdasar tag
+      var id_a = document.querySelector("#a");// berdasar id
+      var class_a = document.querySelector(".a");//berdasar class
+      var name_a = document.querySelector("[name='a']");//berdasar nameClass
+      var onclick_contoh = document.querySelector("[onclick='contoh()']");//berdasar properti onclick
+     ```
     
 
 ### Traversing DOM
@@ -371,6 +381,16 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
    ```
    - paramentElement
    - closest()
-5. traversing ke ssibling element
+5. traversing ke sibling element
    - nextElemenSibling
    - previousElementSibling
+
+### Praktik DOM Manipulation
+1. Bagaimana mengubah konten dari elemen HTML
+   contoh
+   ```javascript
+      document.getElementById("demo").innerHTML = "Hello World!";
+   ```
+2. Bagaimana cara mengubah style CSS dari elemen HTML
+3. Bagaimana menganggapi event
+4. Bagaimana menambah atau menghilangkan element
