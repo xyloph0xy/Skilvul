@@ -320,10 +320,38 @@ Terdapat 2 item apabila kita ingin mengakses DOM
      let title1= document.getElementById("title");
      console.log(title1);
      ```
-   - getElementByClassName
-   - getElementByTagName
-   - querySelector family
-   - children
+     apabila element tidak ada maka return nya null
+   - `getElementByClassName`
+   ```javascript
+   let list = document.getElementsByClassName("list")
+   console.log(list)
+   ```
+   getElementsByClassName akan mereturn dalam bentuk collection element berdasar nama kelasnya (array), maka pemanggilannya dapat menjadi `console.log(list[1])`
+   - `getElementsByTagName`
+   ```javascript
+   let  paragraf= document.getElementsByTagName("p")
+   console.log(paragraf)
+   ```
+ 
+   - `querySelector family`
+   - `children`
+   Digunakan untuk mendapatkan element children, contoh
+   ```HTML
+    <ul class="list">
+      <li class="item">satu</li> <--children-->
+      <li class="item">dua</li> <--children-->
+      <li class="item">tiga</li> <--children-->
+    </ul>
+   ```
+   ```javascript
+   //javascript untuk memanggil children
+   //sebelumnya gunakna getElementsByClassName untuk memanggil parents
+   let list = document.getElementsByClassName("list")
+   console.log(list[0])
+   
+   //kemudian panggil children
+   console.log(list[0].children)
+   ```
 3. traversing ke atas
    - paramentElement
    - closest()
