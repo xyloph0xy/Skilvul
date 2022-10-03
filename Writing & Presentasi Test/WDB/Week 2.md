@@ -305,36 +305,53 @@ Math.LOG2E    // returns base 2 logarithm of E
 Math.LOG10E   // returns base 10 logarithm of E 
 ```
 # DAY 3-5: 27-29 September 2022
-## DOM Manipulation
+## [**DOM Manipulation**](https://www.javascripttutorial.net/javascript-dom/)
 ***Document Object Model*** adalah jembatan supaya bahasa pemrograman dapat berinteraksi dengan dokumen HTML. Dengan DOM ini javascript dapat mengubah struktur HTML. 
 Terdapat 2 item apabila kita ingin mengakses DOM
 1. element, contoh element `<h1>Hallo</h1>`
 2. node, merupakan bagian-bagian terkecil dari HTML 
 <img src="https://www.tutorialstonight.com/assets/articles/node-structure-in-dom.webp" weight="500" height="300">
 
-### Traversing DOM
-1. traversing ke bawah
-   - `getElementById`
+### Selecting elements
+1. `getElementById`
      Digunakan untuk mengakses element berdasar id. Cara mengaksesnya yaitu buat variabel untuk menampung DOM terlebih dahulu, contoh
      ```javascript
      let title1= document.getElementById("title");
      console.log(title1);
      ```
-     apabila element tidak ada maka return nya null
-   - `getElementByClassName`
-   ```javascript
-   let list = document.getElementsByClassName("list")
-   console.log(list)
-   ```
-   getElementsByClassName akan mereturn dalam bentuk collection element berdasar nama kelasnya (array), maka pemanggilannya dapat menjadi `console.log(list[1])`
-   - `getElementsByTagName`
-   ```javascript
-   let  paragraf= document.getElementsByTagName("p")
-   console.log(paragraf)
-   ```
- 
-   - `querySelector family`
-   - `children`
+     apabila element tidak ada maka return nya null. Jika dokumen HTML memiliki beberapa elemen dengan id yang sama, document.getElementById()metode mengembalikan elemen pertama yang ditemuinya.
+2. `getElementByName`
+semua element padaa HTML document bisa memiliki atribut name, contoh
+```javascript
+<input type="radio" name="language" value="JavaScript">
+```
+Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
+4. `getElementByClassName`
+     ```javascript
+      let list = document.getElementsByClassName("list")
+      console.log(list)
+      ```
+   getElementsByClassName akan mereturn dalam bentuk collection element berdasar nama kelasnya (hampir sama seperti array), maka pemanggilannya bisa menggunkaan index `console.log(list[1])`
+ 3. `getElementsByTagName`
+       ```javascript
+        let  paragraf= document.getElementsByTagName("p")
+        console.log(paragraf)
+       ```
+  5. `querySelector`
+     querySelector() adalah selector yang digunakan untuk memilih sebuah elemen. Pemilihan elemen bisa berdasarkan id, class, name, atau property lainnya.
+ ```javascript
+    var tag_p = document.querySelector("p");// berdasar tag
+    var id_a = document.querySelector("#a");// berdasar id
+    var class_a = document.querySelector(".a");//berdasar class
+    var name_a = document.querySelector("[name='a']");//berdasar nameClass
+    var onclick_contoh = document.querySelector("[onclick='contoh()']");//berdasar properti onclick
+    
+
+### Traversing DOM
+1. traversing ke parent element
+   
+3. traversing ke child elements
+`children`
    Digunakan untuk mendapatkan element children, contoh
    ```HTML
     <ul class="list">
@@ -352,9 +369,8 @@ Terdapat 2 item apabila kita ingin mengakses DOM
    //kemudian panggil children
    console.log(list[0].children)
    ```
-3. traversing ke atas
    - paramentElement
    - closest()
-5. traversing ke samping
+5. traversing ke ssibling element
    - nextElemenSibling
    - previousElementSibling
