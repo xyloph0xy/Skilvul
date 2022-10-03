@@ -205,7 +205,7 @@ JavaScript hanya memiliki satu tipe data angka, yaitu number. Tidak ada integer,
     Nilai Infinity dan -Infinity merepresentasikan nilai yang berada diluar     jangkauan nilai yang dapat direpresentasikan JavaScript. Nilai Infinity     dapat dihasilkan dengan melakukan beberapa operasi berikut:>><img src="https://miro.medium.com/max/1100/1*nSwFN7GghkQunln0Mjp5-Q.png" weight= "500" height="200">
     - `NaN`
     Nilai NaN digunakan untuk merepresentasikan sebuah nilai numerik yang tidak mungkin atau ilegal. Walaupun NaN merupakan singkatan dari Not a Number. Operasi pada JavaScript yang dapat menghasilkan nilai NaN, yaitu misalkan operasi angka dengan string yang bukan angka, kecuali (+) karena dianggap konkatenasi.<img src="https://miro.medium.com/max/1100/1*UskGTMUSBZzm8nyqHGOtJg.png" weight= "400" height="150">
-  Operasi aritmatika yang menghasilkan NaN bisa membuat kita repot karena mungkin kita tidak mengekspektasikan hal tersebut terjadi dan mungkin menimbulkan bug. JavaScript menyediakan function isNaN() untuk mendeteksi apakah parameter yang diberikan merupakan NaN atau bukan. Function isNaN() akan mengembalikan true jika parameter yang diberikan bukan angka dan akan mengembalikan false jika parameter yang diberikan merupakan angka.
+    Operasi aritmatika yang menghasilkan NaN bisa membuat kita repot karena mungkin kita tidak mengekspektasikan hal tersebut terjadi dan mungkin menimbulkan bug. JavaScript menyediakan function isNaN() untuk mendeteksi apakah parameter yang diberikan merupakan NaN atau bukan. Function isNaN() akan mengembalikan true jika parameter yang diberikan bukan angka dan akan mengembalikan false jika parameter yang diberikan merupakan angka.
   
 
 3. **boolean**
@@ -450,17 +450,17 @@ Kita bisa melakukan aksi tertentu untuk merespon event tersebut. Misalnya, Saat 
   <img src="https://www.petanikode.com/img/javascript-event/method-add-eventlistener.avif" weight="300" height="150">
   Penulisan nama event ditulis tanpa menggunakan on. Jadi, misalnya kita ingin menghandle event klik, maka cukup tulis click saja. 
 ### Handle event di Javascript ada apa aja sih ?
-1. Event Click
+  1. Event Click
    Event klik termasuk dalam Mouse Event, karena pemicunya adalah aktivitas klik dari mouse atau tap (jika di HP). Kita bisa memberikan aksi tertentu saat terjadi klik, misalnya menampilkan dialog `alert()`. Selain event click ada juga event `dblclick` untuk double klik.
-2. Selain diklik, berikut ini event yang bisa terjadi karena mouse:
-   - `mouseover` (hover) saat pointer berada di atas element;
-   - `mouseenter` saat pointer mendekat pada elemen;
-   - `mouseout` saat pointer menjauh dari elemen;
-3. Event keyboard
+  2. Selain diklik, berikut ini event yang bisa terjadi karena mouse:
+  - `mouseover` (hover) saat pointer berada di atas element;
+  - `mouseenter` saat pointer mendekat pada elemen;
+  - `mouseout` saat pointer menjauh dari elemen;
+  3. Event keyboard
    Berikut ini beberapa event yang bisa terjadi saat kita menekan keyboard:
-   - `keypress`: kejadian saat kita menekan dan menahan tombol tertentu;
-   - `keyup`: kejadian saat kita berhenti menekan (melepas) tombol tertentu;
-   - `keydown`: kejadian saat kita mulai menekan tombol tertentu;
- 4. Event change
+  - `keypress`: kejadian saat kita menekan dan menahan tombol tertentu;
+  - `keyup`: kejadian saat kita berhenti menekan (melepas) tombol tertentu;
+  - `keydown`: kejadian saat kita mulai menekan tombol tertentu;
+  4. Event change
     Event change biasanya terjadi pada elemen input seperti input text, radio, checkbox, select-option, dll. Event change akan terjadi saat nilai pada elemen tersebut berubah.
- 5. dll
+  5. dll
