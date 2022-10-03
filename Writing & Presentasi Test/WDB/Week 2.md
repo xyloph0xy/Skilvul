@@ -96,4 +96,43 @@ console.log(berkenalan()); // Output: Hallo, nama saya Sarah.
 console.log() hanya menampilkan informasi ke dalam tab console JavaScript, 
 sedangkan return akan mengembalikan sebuah nilai ke tempat di mana fungsi itu dipanggil.
 
-Di dalam javascript ada sebuah ***parameter dan argument***, apalagi tuh ??
+Di dalam javascript ada sebuah ***argument dan parameter***, apalagi tuh ??
+***ARGUMENT*** adalah nilai yang diteruskan ke dalam sebuah fungsi ketika fungsi itu dipanggil, sedangkan ***PARAMETER*** adalah variabel yang terdaftar menjadi bagian dari definisi fungsi
+```javascript
+function testArgument(parameter1, parameter2, parameter3){
+ console.log(parameter1 + parameter2 + parameter3);
+}
+ 
+// testArgument dengan argument tambahan
+testArgument(1,2,3); //output : 6
+//argumentnya adalah 1,2,3
+```
+#### Default parameter
+Dalam javascript, sebuah parameter memiliki nilai default undefined. Jadi ketika kita tidak meneruskan argument ke dalam sebuah fungsi, maka parameter yang dimiliki oleh fungsi tersebut akan bernilai undefined.
+```javascript
+function talk (message){
+    console.log(message);
+}
+talk();
+//VM212:2 undefined
+```
+Jika kita ingin mengubah nilai default dari sebuah parameter, kita bisa menggunakan operator penugasan (=) lalu diikuti dengan nilai default dari parameter tersebut. 
+```javascript
+function talk (message="hai"){
+    console.log(message);
+}
+talk();
+//VM247:2 hai
+```
+#### Rest Parameter
+Pada update ES6 terdapat jenis parameter baru yang bernama rest parameter yang memiliki tanda tiga titik (…) sebagai prefix. Rest parameter memungkinkan kita untuk mewakili jumlah argument yang tidak terhingga sebagai array.
+``` javascript
+function restParam(angka1, ...angkaSetelahnya){
+ console.log('angka 1: ',angka1);
+ console.log('angkaSetelahnya: ', angkaSetelahnya)
+}
+ 
+restParam(1,2,3,4,5,6);
+//VM592:2 angka 1:  1
+//VM592:3 angkaSetelahnya:  (5) [2, 3, 4, 5, 6]
+```
