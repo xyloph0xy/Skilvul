@@ -335,18 +335,18 @@ semua element padaa HTML document bisa memiliki atribut name, contoh
 <input type="radio" name="language" value="JavaScript">
 ```
 Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
-4. `getElementByClassName`
+3. `getElementByClassName`
      ```javascript
       let list = document.getElementsByClassName("list")
       console.log(list)
       ```
    getElementsByClassName akan mereturn dalam bentuk collection element berdasar nama kelasnya (hampir sama seperti array), maka pemanggilannya bisa menggunkaan index `console.log(list[1])`
- 3. `getElementsByTagName`
+4. `getElementsByTagName`
        ```javascript
         let  paragraf= document.getElementsByTagName("p")
         console.log(paragraf)
        ```
-  5. `querySelector`
+ 5. `querySelector`
      querySelector() adalah selector yang digunakan untuk memilih sebuah elemen. Pemilihan elemen bisa berdasarkan id, class, name, atau property lainnya.
       ```javascript
       var tag_p = document.querySelector("p");// berdasar tag
@@ -360,7 +360,7 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
 ### Traversing DOM
 1. traversing ke parent element
    
-3. traversing ke child elements
+2. traversing ke child elements
 `children`
    Digunakan untuk mendapatkan element children, contoh
    ```HTML
@@ -381,7 +381,7 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
    ```
    - paramentElement
    - closest()
-5. traversing ke sibling element
+3. traversing ke sibling element
    - nextElemenSibling
    - previousElementSibling
 
@@ -421,7 +421,7 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
       document.createElement('p');
       ```
     Maka, akan tercipta elemen <p> baru. Namun tidak akan ditampilkan ke dalam halaman web. Karena kita belum menambahkannya ke dalam body dokumen. Cara menambahkannya ke body dokumen, kita bisa gunakan fungsi `append()`.
-```javascript
+    ```javascript
       <script>
         // membuat element h1
         var judul = document.createElement("h1");
@@ -431,5 +431,5 @@ Tidak seperti id, beberapa atribut name bisa memiliki value yang sama
 
         // menambahkan elemen ke dalam tag body
         document.body.append(judul);
-    </script>
+      </script>
       ```
