@@ -234,11 +234,33 @@ typeof hewan
 #### Non Primitive
 Pada JavaScript, jika suatu tipe data bukan termasuk primitif maka dapat dipastikan tipe data tersebut Object. Ya, termasuk Array. Pada JavaScript Array merupakan Object.
 1. Object
+object adalah tipe data yang kompleks yang memungkinkan kita menyimpan kumpulan nilai dengan tipe data yang berbeda. Objek berisi properti yang didefinisikan sebagai pasangan kunci dan nilai (key dan value). Di JavaScript kita bisa membuat objek dengan beberapa cara, bisa menggunakan new Object(), Object.create(), atau menggunakan notasi literal.
+Untuk membuat objek literal properti kunci dan nilai dari suatu objek diapit atau dibungkus dengan kurung kurawal {}, jika memiliki lebih dari satu properti dipisahkan dengan koma.
+```javascript
+const obj = {
+  nama: 'Luluk',
+  umur: 20
+};
 
-Klasifikasi tipe data object dibagi menjadi dua yaitu Function, Array dan Object.
+console.log(obj.nama); //Luluk
+```
 2. Arrays
-3. Functionn
+Array adalah jenis objek yang dapat digunakan untuk menyimpan beberapa nilai, tanpa properti seperti objek.
 
+Array memiliki indeks yang dimulai dari nol dengan kata lain elemen atau nilai pertama di dalam array memiliki indeks 0, elemen berikutnya memiliki indeks 1 dan seterusnya. kita bisa menggunakan indeks untuk memanipulasi nilainya.
+
+Sama seperti objek, array juga dapat dibuat menggunakan new Array() atau array literal [].
+
+Nilai pada array literal harus diapit dengan kurung siku [], jika memiliki lebih dari satu nilai dipisahkan dengan koma. Kita bisa memasukkan tipe data apa pun ke dalam array, termasuk array dan objek.
+
+#### Perbedaan type data primitive dengan non-primitive
+1. Tipe data primitif hanya dapat menyimpan satu nilai pada satu waktu dan tidak dapat diubah menggunakan cara yang sama seperti tipe data non-primitif. Tipe data Primitif akan dianggap sama jika nilainya sama. Sedangkan tipe data non-primitif dapat menyimpan lebih dari satu nilai pada satu waktu dan dapat diubah. Tipe data non-primitif akan dianggap berbeda meskipun nilainya sama dan dalam urutan yang sama.
+2. Jumlah nilai yang dapat disimpan oleh primitif hanya satu nilai, sedangkan Non-primitif bisa lebih dari satu nilai
+```javascript
+const nama = 'luluk'; //primitif
+const bio = ['luluk', 20, true, null, undefined];//non-primitif
+```
+4. Perubahan nilai pada primitif tidak dapat diubah, sedangkan pada non-primitif bisa diubah
 #### [**Math**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math?retiredLocale=id) pada javascript
 Objek Math adalah objek yang berisi fungsi-fungsi matematika dan beberapa konstanta untuk melakukan perhitungan matematika seperti sin, cos, tan, eksponen, akar kuadrat, dll.
 1. Fungsi trigonometri (sin,cos,tan)
@@ -283,3 +305,4 @@ Math.LN10     // returns the natural logarithm of 10
 Math.LOG2E    // returns base 2 logarithm of E
 Math.LOG10E   // returns base 10 logarithm of E 
 ```
+# DAY 3: 27 September 2022
