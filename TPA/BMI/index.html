@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI</title>
     <style>
         .BMI-check{
             display: flex;
@@ -81,16 +81,16 @@
                 let hasil=berat/(tinggi/100)**2;
 
                 if(hasil>=30){
-                    return `BMI kamu adalah ${hasil}, yang artinya kamu obesitas. Selalu jaga pola makan dan rajin berolahraga ya`
+                    return `Your BMI is ${hasil}, which mean You are Obesitas.`
                 }
                 else if(hasil>=25 && hasil<=29.9){
-                    return `BMI kamu adalah ${hasil}, yang artinya kamu kelebihan berat badan. Selalu jaga pola makan dan rajin berolahraga ya`
+                    return `Your BMI is ${hasil}, which mean You are Overweight.`
                 }
                 else if(hasil>=18.5 && hasil<=24.9){
-                    return `BMI kamu adalah ${hasil}, yang artinya berat badan kamu normal. Selalu jaga pola makan dan rajin berolahraga ya`
+                    return `Your BMI is ${hasil}, which mean You are Norma weight.`
                 }
                 else{
-                    return `BMI kamu adalah ${hasil}, yang artinya berat badan kamu kurang. Selalu jaga pola makan dan rajin berolahraga ya`
+                    return `Your BMI is ${hasil}, which mean You are Underweight.`
                 }
             } 
             document.getElementById("test").innerHTML=hitung()
