@@ -170,11 +170,67 @@ umur: 20,
 "nomer handphone": 08947549823
 }
 ```
-
-
+penambahan properti dapat dilakukan dengan berbagai cara seperti contoh di bawah ini
+```javascript
+siswa.asal = "Klaten";
+siswa["hobi"]= "makan"
+```
+penambahan properti menggunakan bracket wajib diberi tanda string `".."` supaya tidak error
 ## Assign object
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+"nomer handphone": 08947549823
+}
+```
+cara mengganti value properti pada sebuah object
+```javascript
+siswa.nama = "sofi"
+siswa["umur"]=21
+```
+value pada nama akan berubah menjadi sofi dan umur menjadi 21. perubahan pada variabel ***const*** juga masih dapat dilakukan selama tidak mengganti seluruh isi yang ada di dalamnya.
 ## Delete object
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+"nomer handphone": 08947549823
+}
+```
+untuk menghapus properti dapat menggunakan `delete`, contoh
+```javascript
+delete siswa.nama;
+```
 ## Method object
+method adalah sebuah properti yang valuenya function.
+contoh
+```javascript
+const greeting = {
+pagi: function (){
+return "selamat pagi"
+},
+sore: function(){
+return "selamat sore";
+},
+};
+//cara panggilnya
+console.log(greeting.pagi());
+//output selamat pagi
+```
+penulisan `()` pada `greeting.pagi()` dimaksudkan kita memanggil semua proses yang ada di dalam function pagi.
+
+Object juga memiliki beberapa built in method, contohnya
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+}
+console.log(Object.keys(siswa));
+//outputnya ["nama","umur"]
+```
+`object.keys()` digunakan untuk mengubah object menjadi array, sedangkan untuk mengubah nilai atau value dapat menggunakan `object.value()`
 ## Nested object
+
 ## Loop object
 ## Array of object
