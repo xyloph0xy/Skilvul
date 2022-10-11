@@ -39,9 +39,10 @@ console.log(array); //true, string, 8, 0.8, null, luluk
 
 2. For of
 
-  `for (let namaVariabel of namaArray ){
+  ```javascript
+  for (let namaVariabel of namaArray ){
     console.log(namaVariabel);
-    `
+    ```
     contoh menggunakan data array exArray
     ```javascript
     let exArray = [true, 'string', 8, 0.8, null]
