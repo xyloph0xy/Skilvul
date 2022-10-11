@@ -98,3 +98,16 @@ console.log(array); //true, string, 8, 0.8, null, luluk
 ### Perbedaan for, forEach, dan Map
 1. forEach dan Map akan melakukan perulangan dari awal sampai akhir dan tidak bisa dihentikan di tengah jalan, sedangkan for masih dibisa dihentikan menggunakan `break` atau dilompatin menggunakan `continue`. 
 2. Kemudian map hampir sama dengan forEach. Bedanya forEach tidak bisa mengembalikan nilai sedangkan map bisa. Apabila kamu ingin mengembalikan nilai, makanya map yang harus digunakan karena forEach tidak bisa diberi return. 
+
+## Array Multidimensi
+Merupakan sebuah array di dalam array
+```javascript
+let arrayMulti=[
+["nama", "Luluk"]
+["umur", "20"]
+]
+ //cara aksesnya
+ console.log(arrayMulti[0][1]);
+ //output luluk 
+ //[0] merupakan nomor baris, [1] merupakan nomor kolom
+ ```
