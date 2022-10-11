@@ -38,16 +38,17 @@ console.log(array); //true, string, 8, 0.8, null, luluk
   Untuk menampilkan array kita menggunakan `array[indexArray]`. Bayangkan apabila index yang dimiliki array adalah 100, maka kita harus mengetikkan program satu-satu untuk menampilkan array tersebut.
 
 2. For of
+
   `for (let namaVariabel of namaArray ){
-  console.log(namaVariabel);
-  `
-  contoh menggunakan data array exArray
-  ```javascript
-  let exArray = [true, 'string', 8, 0.8, null]
-  for (let contohArray of exArray){
-  console.log(contohArray)
-  }
-  ```
+    console.log(namaVariabel);
+    `
+    contoh menggunakan data array exArray
+    ```javascript
+    let exArray = [true, 'string', 8, 0.8, null]
+    for (let contohArray of exArray){
+    console.log(contohArray)
+    }
+    ```
 
   `let contohArray` digunakan untuk menampung/mewakilkan data exArray untuk kemudian di looping, contoh mudanya `let contohArray` sama seperti `let i` pada looping for  
 
