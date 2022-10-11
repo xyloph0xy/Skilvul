@@ -231,6 +231,23 @@ console.log(Object.keys(siswa));
 ```
 `object.keys()` digunakan untuk mengubah object menjadi array, sedangkan untuk mengubah nilai atau value dapat menggunakan `object.value()`
 ## Nested object
-
+Sebuah object yang menyimpan object di dalamnya.
+contoh
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+karya: {
+buku1: {
+judul: "dongeng",
+tahun: 2022
+},
+buku2: {
+judul: "fiksi",
+tahun: 2021
+}
+}
+}
+```
 ## Loop object
 ## Array of object
