@@ -235,19 +235,82 @@ Sebuah object yang menyimpan object di dalamnya.
 contoh
 ```javascript
 let siswa = {
-nama: "luluk",
-umur: 20,
-karya: {
-buku1: {
-judul: "dongeng",
-tahun: 2022
-},
-buku2: {
-judul: "fiksi",
-tahun: 2021
-}
-}
+      nama: "luluk",
+      umur: 20,
+      karya: {
+            buku1: {
+                  judul: "dongeng",
+                  tahun: 2022
+            },
+            buku2: {
+                  judul: "fiksi",
+                  tahun: 2021
+            }
+      }
 }
 ```
+cara mengakses propertinya adalah diambil dari object yang terluar, contoh
+```javascript
+consoloe.log("siswa.karya.buku1.judul");
+//output dongeng
+```
 ## Loop object
+loop yang digunakan untuk object adalah `for in`, loop ini dapat berfungsi untuk memanggil properti yang berada di dalam object tanpa harus kita panggil satu-satu.
+contoh
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+}
+for(let u in siswa){
+console.log(siswa[u]);
+}
+//luluk
+//20
+```
+`let u` mengacu properti pada object, sedangkan `siswa[key]` mengacu pada value yang berada pada object siswa.
+
+kemudian apabila kita ingin melakukan perulangan pada nested object, maka cara ini dapat digunakan
+```javascript
+let siswa = {
+      nama: "luluk",
+      umur: 20,
+      karya: {
+            buku1: {
+                  judul: "dongeng",
+                  tahun: 2022
+            },
+            buku2: {
+                  judul: "fiksi",
+                  tahun: 2021
+            }
+      }
+}
+for(let n in siswa.karya.buku1){
+console.log(siswa.karya.buku1[u])
+}
+//dongeng
+//2022
+```
 ## Array of object
+Sebuah array yang menyimpan object sebagai nilai indeksnya.
+```javascript
+let penulis = [
+{
+      nama : "luluk",
+      umur : 20
+},
+{
+      nama : "sofi",
+      umur : 20
+}
+];
+
+let data = penulis.map(u)=> {
+      console.log(u.nama)
+      //luluk
+      //sofi
+      //u merupakan nama variabel, jadi bebas mau dinamain apa
+}
+```
+contoh di atas menggunakan looping map, selain map looping array of object dapat menggunakan `forEach` atau `For in`.
