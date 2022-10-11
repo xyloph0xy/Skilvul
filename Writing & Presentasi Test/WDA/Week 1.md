@@ -111,3 +111,70 @@ let arrayMulti=[
  //output luluk 
  //[0] merupakan nomor baris, [1] merupakan nomor kolom
  ```
+ 
+ # DAY 2 : 4 Oktober 2022
+ # Object javascript
+Object adalah tipe data non-primitive yang bisa memiliki properti dan fungsi atau key dan value . Properti adalah data lengkap dari sebuah object. Sedangkan method adalah action dari sebuah object. Apa saja yang dapat dilakukan dari suatu object.
+
+## Create object
+```javascript
+let nama_obj = {
+key1 = "value1",
+key2 = "value2",
+}
+```
+contoh 
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+"nomer handphone": 08947549823
+}
+```
+
+key `"nomer handphone: ` digunakan untuk menuliskan key yang memiliki spasi, pada dasarnya  js tidak bisa menerima key yang memiliki atau variabel yang memiliki spasi.
+
+## Access object
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+"nomer handphone": 08947549823
+}
+```
+untuk mengakses object digunakan nama value atau propertinya. Tidak seperti array, object tidak memiliki indeks
+1. dot notation
+      ```javascript
+      console.log(siswa.nama);// luluk
+      console.log(siswa.nomer handphone)// output error
+      ```
+2. bracket
+      ```javascript
+      console.log(siswa['nama'])// luluk
+      console.log(siswa['nomer handphone'])// 08947549823 
+      ```
+      pemanggilan nama properti yang memiliki spasi tidak dapat menggunakan dot notation, alternatifnya adalah menggunakan bracket
+
+3. variabel
+      ```javascript
+      let properti = "umur";
+      console.log(siswa[properti]);
+      //20
+      ```
+      
+## Create key
+```javascript
+let siswa = {
+nama: "luluk",
+umur: 20,
+"nomer handphone": 08947549823
+}
+```
+
+
+## Assign object
+## Delete object
+## Method object
+## Nested object
+## Loop object
+## Array of object
