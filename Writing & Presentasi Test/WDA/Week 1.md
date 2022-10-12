@@ -321,6 +321,7 @@ JavaScript modules memungkinkan kita untuk memisahkan atau memecahkan kode menja
 ```html
 <script src="./namaFile.js"> type="module"></script>
 ```
+nama file yang dicantumkan pada file html di atas hanya bisa melakukan import dari berbagai file lainnya saja
 
 ## Export dan import
 Terdapat dua buah file js
@@ -335,7 +336,7 @@ let entertainment= ["anime", "manga", "sushi"]
 export{motor}
 export default entertainment
 ```
-`export` perlu ditambahkan untuk mengekspor data atau code dari sebuah file, code yang diekspor bisa dalam bentuk variable maupun function. Kemudian ada perintah `export default` yang diletakkan di depan variabel/ function yang digunakan untuk mengekespor variabel atau function utama
+`export` perlu ditambahkan untuk mengekspor data atau code dari sebuah file, code yang diekspor bisa dalam bentuk variable maupun function. Kemudian ada perintah `export default` yang diletakkan di depan variabel/ function yang digunakan untuk mengekespor variabel atau function utama, export default hanya dapat mengekespor satu data utama saja.
 #### File indonesia.js
 ```javascript
 import entertain,{motor} from "./jepang.js"
