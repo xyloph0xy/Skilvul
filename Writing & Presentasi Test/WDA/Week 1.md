@@ -327,15 +327,22 @@ Terdapat dua buah file js
 #### File jepang.js
 ```javascript
 export let motor = ["suzuki", "yamaha", "honda", "kawasaki"]
-```
-`export` perlu ditambahkan untuk mengekspor data atau code dari sebuah file, code yang diekspor bisa dalam bentuk variable maupun function
-### File indonesia.js
-```javascript
-import {motor} from "./jepang.js"
-```
-`import {...} from "...."` digunakan untuk menerima sebuah data yang diekspor. Kurung kurawal `{...}` berfungsi untuk menangkap data yang di import atau diterima.
+export default entertainment= ["anime", "manga", "sushi"]
 
-Untuk mengubah nama yang diekspor dapat menggunakan perintah `as` seperti contoh di bawah ini
+//cara lain
+let motor = ["suzuki", "yamaha", "honda", "kawasaki"]
+let entertainment= ["anime", "manga", "sushi"]
+export{motor}
+export default entertainment
+```
+`export` perlu ditambahkan untuk mengekspor data atau code dari sebuah file, code yang diekspor bisa dalam bentuk variable maupun function. Kemudian ada perintah `export default` yang diletakkan di depan variabel/ function yang digunakan untuk mengekespor variabel atau function utama
+#### File indonesia.js
+```javascript
+import entertain,{motor} from "./jepang.js"
+```
+`import {...} from "...."` digunakan untuk menerima sebuah data yang diekspor. Kurung kurawal `{...}` berfungsi untuk menangkap data yang di import atau diterima. Penangkapan/penerimaan data export default tidak perlu menggunakan kurung kurawal. 
+
+Penggantian nama variabel/function dari ekspor default dapat dilakukan secara langsung tanpa adanya error sedangkan untuk mengubah nama yang diekspor (bukan ekspor default) dapat menggunakan perintah `as` seperti contoh di bawah ini
 ```javascript
 import {motor as motorJepang} from "./jepang.js"
 ```
@@ -343,7 +350,6 @@ Data yang diimport atau diterima juga dapat di manipulasi seperti variabel pada 
 ```javascript
 import {namaData1,namaData2} from "./namaFileImport"
 ```
-
 
 
 
