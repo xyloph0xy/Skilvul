@@ -314,3 +314,39 @@ let data = penulis.map(u)=> {
 }
 ```
 contoh di atas menggunakan looping map, selain map looping array of object dapat menggunakan `forEach` atau `For in`.
+
+# DAY 3: 5 Oktober 2022
+# JavaScript Modules
+JavaScript modules memungkinkan kita untuk memisahkan atau memecahkan kode menjadi file yang berbeda supaya lebih mudah dikelola. File yang dipecah dapat dihubungkan ke file utama. Untuk menngunakan modules pada javascript dibutuhkan atribut tambahan pada tag script HTML, yaitu `type="modules"`
+```html
+<script src="./namaFile.js"> type="module"></script>
+```
+
+## Export dan import
+Terdapat dua buah file js
+#### File jepang.js
+```javascript
+export let motor = ["suzuki", "yamaha", "honda", "kawasaki"]
+```
+`export` perlu ditambahkan untuk mengekspor data atau code dari sebuah file, code yang diekspor bisa dalam bentuk variable maupun function
+### File indonesia.js
+```javascript
+import {motor} from "./jepang.js"
+```
+`import {...} from "...."` digunakan untuk menerima sebuah data yang diekspor. Kurung kurawal `{...}` berfungsi untuk menangkap data yang di import atau diterima.
+
+Untuk mengubah nama yang diekspor dapat menggunakan perintah `as` seperti contoh di bawah ini
+```javascript
+import {motor as motorJepang} from "./jepang.js"
+```
+Data yang diimport atau diterima juga dapat di manipulasi seperti variabel pada umumnya. Selain itu kita juga dapat mengimport data lebih dari satu menggunakan koma `,` :
+```javascript
+import {namaData1,namaData2} from "./namaFileImport"
+```
+
+
+
+
+
+
+
