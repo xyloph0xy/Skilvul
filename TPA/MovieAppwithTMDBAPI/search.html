@@ -16,16 +16,6 @@
       crossorigin="anonymous"
     ></script>
     <title>MovieApp</title>
-    <style>
-        button>a{
-            text-decoration: none;
-            color: green;
-        }
-        button>a:hover{
-            color:whitesmoke;
-        }
-    </style>
-   
   </head>
 
   <body>
@@ -38,13 +28,14 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
+            id="cari"
           />
-          <button class="btn btn-outline-success" type="submit"><a href="search.html">Search</a></button>
+          <button class="btn btn-outline-success" type="submit" onclick="searchMovieApp()">Search</button>
         </form>
       </div>
     </nav>
     
     <div id="movie-app" class="row row-cols-3 row-cols-md-3 g-5 p-5"></div>
-    <script src="script.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

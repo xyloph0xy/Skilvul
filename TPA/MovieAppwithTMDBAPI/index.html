@@ -16,29 +16,21 @@
       crossorigin="anonymous"
     ></script>
     <title>MovieApp</title>
-    <style>
-        button>a{
-            text-decoration: none;
-            color: green;
-        }
-        button>a:hover{
-            color:whitesmoke;
-        }
-    </style>
   </head>
 
   <body>
     <nav class="navbar p-5">
       <div class="container-fluid">
         <a class="navbar-brand fs"><strong>SkillMovie</strong></a>
-        <form class="d-flex" role="search">
+        <form action="search.html" class="d-flex" role="search">
           <input
             class="form-control me-4"
             type="search"
             placeholder="Search"
             aria-label="Search"
+            id="cari"
           />
-          <button class="btn btn-outline-success" type="submit"><a href="search.html">Search</a></button>
+          <button class="btn btn-outline-success" type="submit" onclick="searchMovieApp()">Search</a></button>
         </form>
       </div>
     </nav>
