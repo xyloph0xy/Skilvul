@@ -348,12 +348,22 @@ Penggantian nama variabel/function dari ekspor default dapat dilakukan secara la
 import {motor as motorJepang} from "./jepang.js"
 ```
 Data yang diimport atau diterima juga dapat di manipulasi seperti variabel pada umumnya. Selain itu kita juga dapat mengimport data lebih dari satu menggunakan koma `,` :
+
 ```javascript
 import {namaData1,namaData2} from "./namaFileImport"
 ```
+## Rekursif
+Rekursif adalah sebuah algoritma function yang dapat memanggil dirinya sendiri di dalam function tersebut seperti halnya looping. Rekursif dapat digunakan untuk menghitung rumus matematika yang cukup rumit
 
-
-
+contoh :
+```javascript
+function namaFunc(){
+namaFunc();
+}
+```
+Dalam rekursif terdapat dua kunci, yaitu :
+1. `basecase`
+2. `recursive case`
 
 
 
