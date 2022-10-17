@@ -1,4 +1,4 @@
-fetch('https://api.themoviedb.org/3/discover/movie?api_key=9ce85ed406f6b2e4420bb68fe84eb2a1&language=en-US&sort_by=popularity.desc&page=1')
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=9ce85ed406f6b2e4420bb68fe84eb2a1&language=en-US&sort_by=popularity.desc&page=1`)
 .then(result => {
     console.log(result);
     return result.json()

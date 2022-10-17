@@ -22,27 +22,21 @@
     <nav class="navbar p-5">
       <div class="container-fluid">
         <a class="navbar-brand fs"><strong>SkillMovie</strong></a>
-        <form action="search.html" class="d-flex" role="search">
+        <form class="d-flex" role="search" action="search.html">
           <input
+       
             class="form-control me-4"
             type="search"
             placeholder="Search"
             aria-label="Search"
-            id="cari"
+            
           />
-          <button class="btn btn-outline-success" type="submit" onclick="searchMovieApp()">Search</a></button>
+          <button class="btn btn-outline-success" type="submit" onsubmit="searchMovieApp()">Search</button>
         </form>
       </div>
     </nav>
     
     <div id="movie-app" class="row row-cols-3 row-cols-md-3 g-5 p-5"></div>
-    
-      <!-- <div id="movie-app" class="row row-cols-3 row-cols-md-3 g-5 m-2>
-        
-        
-        </div>
-      </div> -->
-  
 
     <script src="script.js"></script>
   </body>
