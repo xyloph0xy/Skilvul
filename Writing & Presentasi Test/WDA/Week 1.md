@@ -353,7 +353,7 @@ Data yang diimport atau diterima juga dapat di manipulasi seperti variabel pada 
 import {namaData1,namaData2} from "./namaFileImport"
 ```
 ## Rekursif
-Rekursif adalah sebuah algoritma function yang dapat memanggil dirinya sendiri di dalam function tersebut seperti halnya looping. Rekursif dapat digunakan untuk menghitung rumus matematika yang cukup rumit
+Rekursif adalah sebuah algoritma function yang dapat memanggil dirinya sendiri di dalam function tersebut seperti halnya looping. Rekursif dapat digunakan untuk menghitung rumus matematika yang cukup rumit. Untuk mempermudah pemahaman, bayangkan saja terdapat sebuah masalah yang besar untuk menyelesaikan masalah tersebut pecah masalah besar menjadi ke yang paling kecil kemudian selesaikan masalah yang paling kecil tersebut maka masalah yang lebih besar di atasnya akan mengikuti hingga masalah yang paling besar pun ikut mengikuti,  itulah yang dinamakan rekursif
 
 contoh :
 ```javascript
@@ -362,8 +362,64 @@ namaFunc();
 }
 ```
 Dalam rekursif terdapat dua kunci, yaitu :
-1. `basecase`
-2. `recursive case`
+1. `basecase`, titik paling kecil (berhenti)
+2. `recursive case`, titk pemanggilan functionnya sendiri
 
+contoh program rekursif untuk menampilkan angka 1-5
 
+```javascript
+function deretAngka(){
+if (n==1){
+//if adalah basecase
+console.log(n)
+}else{
+//else nya adalah recursive case
+deretAngka(n-1)
+console.log(n)
+}
+}
+deretAngka(3);
+//1 2 3 
+```
+**Penjelasan**
 
+1. if akan mengecek apakah 3 sama dengan 1
+2. apabila benar maka console akan menampilkan 1
+3. apabila bukan kondisi else akan dijalankan yaitu deretAngka(n-1) `masuk ke function yang kedua`
+4. pada function deretAngka(n-1), kemudian akan di cek kembali apakah n= 3-1 `baca 2` sama dengan 1
+5. jika bukan maka kondisi else dijalankan yaitu deretAngka (n-1) `masuk ke function yang ketiga`
+6. pada function deretAngka(n-1), akan dicek lagi apakah n= 2-1 `baca 1` sama dengan satu
+7. apabila iya maka akan menampilkan 1
+8. kemudian kembali kondisi `function yang ketiga` else yang console.log (n) akan menampilkan n = 2
+9. kemudian kembali kondisi `function yang kedua` else yang console.log (n) akan menampilkan n = 3
+
+# DAY 4: 6 Oktober 2022
+# Asynchoronus
+Javascript merupakan bahasa pemrograman yang memiliki fitur single-thread, non-blocking, dan asynchronous
+### Apa itu single-thread
+Simpelnya single-thread adalah satu jalur yang harus saling menunggu untuk mengeksekusi proses selanjutnya secara berurutan dan satu persatu. Berbeda dengan lawannya yaitu multi-thread, pengeksekusian proses pada multi-thread dapat dilakukan secara bersamaan dalam satu waktu karena jalur yang dimiliki banyak
+### Apa itu non-blocking
+Sebuah sistem yang mengizinkan proses yang lama mendahulukan proses yang lebih cepat
+### apa itu asynchronous
+Sedangkan asynchronous adalah sistem yang mengizinkan proses lain dikerjakan sembari menunggu proses (panjang atau lama) yang masih berlangsung
+
+## Terdapat 3 kunci utama yang digunakan untuk menghandle asynchronous 
+1. callback
+   Pada setiap browser yang berbeda memiliki 2 bagian, yaitu heap dan stack(tumpukan). Stack pada browser memiliki sifat first in last out, jadi setiap kode javascript yang ditulis dieksekusi pada stack sesuai tumpukan. Kemudian pada kebanyakan web API memiliki sifat asynchronous yang membutuhkan waktu untuk menjalankannya. Karena membutuhkan waktu, maka asynchronous akan masuk ke callback queue ketika dijalankan. Mudahnya callback queue adalah sebuah ruang tunggu yang dipakai untuk menunggu proses asynchronous dijalankan, dan ketika ruang yang ada di stack tidak memiliki tumpukan atau antrian maka asynchronous yang berada di ruang tunggu (callback queue) akan di panggil.
+   
+   **Nah callback sendiri itu apa sih?** callback adalah sebuah function yang dijadikan sebuah argumen
+   contoh : 
+   ```javascript
+   console.log("A")
+
+      // butuh proses yg memakan waktu
+      // callback -> function yg dijadikan sbg argumen
+      setTimeout(() => {
+        console.log("B")
+      }, 1000)
+
+      console.log("C")
+      //output A C B
+   ```
+3. promise
+4. async await
