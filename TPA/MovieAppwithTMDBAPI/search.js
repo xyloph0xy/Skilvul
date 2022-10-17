@@ -12,7 +12,6 @@ async function searchMovieApp(){
           let show= document.getElementById("movie-app")
           show.innerHTML += 
           `
-          
           <div class="col ">
           <div class="card h-100 ">
             <img src="https://www.themoviedb.org/t/p/w500${item.poster_path}
