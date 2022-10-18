@@ -427,6 +427,30 @@ Sama halnya sebuah janji, promise memiliki 3 kemungkinan state :
 - pendind
 - fulfilled
 - rejected
-
-
-4. async await
+cara menggunakan promise
+``javascript
+let namaVar = new Promise((resolve, reject) => {
+    // Isi dari promise yang akan dibuat
+});
+```
+Resolve menyatakan promise sudah dijalankan, sedangkan reject kebalikannya. Untuk menangkap resolve dapat menggunakan `.then`, sedangkan reject menggunakan `.catch`
+```javascript
+let nontonPromise = new Promise((resolve, reject) => {
+  if (true) {
+    resolve("nonton terpenuhi") // berhasil
+  } 
+  reject("gagal"); // gagal
+});
+nontonPromise
+  .then( })
+  .catch((err) => {
+    console.log(err);
+  });
+  (result) => {
+    console.log(result);
+    })
+  .catch((err) => {
+    console.log(err);
+  });
+  //output nonton berhasil
+```
