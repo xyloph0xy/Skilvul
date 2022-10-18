@@ -428,7 +428,7 @@ Sama halnya sebuah janji, promise memiliki 3 kemungkinan state :
 - fulfilled
 - rejected
 cara menggunakan promise
-``javascript
+```javascript
 let namaVar = new Promise((resolve, reject) => {
     // Isi dari promise yang akan dibuat
 });
