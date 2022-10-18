@@ -30,7 +30,11 @@ async function asyncNonton() {
   }
 }
 asyncNonton()
+//output nonton terpenuhi
+//namun jika "jalan" pada await di hapus maka outputnya error
 ```
+Pembuatan async await hampir sama dengan async function, bedanya pada  async await terdapat kata kunci `async` di depan function `async function asyncNonton() {}` . Untuk menangkap promise menggunakan async await maka ditambahkan kata kunci `await` ketika memanggil promise, kemudian setelah dipanggil maka disimpan ke dalam sebuah variabel `let result = *await* nonton("jalan")` . Kemudian terdapat sebuah metode error handler `try{}catch(){}` yang digunakan untuk menangkap promise dengan hasil reject. Cara kerja `try{}catch(){}` adalah promise yang sudah dibuat tadi akan di coba di `try{}`, apabila nilai promise yang ditangkap adalah reject, maka akan ditangkap oleh `catch(){}`
+
 ## Asynchronous-fetch
 
 
