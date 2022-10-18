@@ -403,8 +403,8 @@ Sebuah sistem yang mengizinkan proses yang lama mendahulukan proses yang lebih c
 ### apa itu asynchronous
 Sedangkan asynchronous adalah sistem yang mengizinkan proses lain dikerjakan sembari menunggu proses (panjang atau lama) yang masih berlangsung
 
-## Terdapat 3 kunci utama yang digunakan untuk menghandle asynchronous 
-1. callback
+Terdapat 3 kunci utama yang digunakan untuk menghandle asynchronous 
+## callback
    Pada setiap browser yang berbeda memiliki 2 bagian, yaitu heap dan stack(tumpukan). Stack pada browser memiliki sifat first in last out, jadi setiap kode javascript yang ditulis dieksekusi pada stack sesuai tumpukan. Kemudian pada kebanyakan web API memiliki sifat asynchronous yang membutuhkan waktu untuk menjalankannya. Karena membutuhkan waktu, maka asynchronous akan masuk ke callback queue ketika dijalankan. Mudahnya callback queue adalah sebuah ruang tunggu yang dipakai untuk menunggu proses asynchronous dijalankan, dan ketika ruang yang ada di stack tidak memiliki tumpukan atau antrian maka asynchronous yang berada di ruang tunggu (callback queue) akan di panggil.
    
    **Nah callback sendiri itu apa sih?** callback adalah sebuah function yang dijadikan sebuah argumen
@@ -421,5 +421,12 @@ Sedangkan asynchronous adalah sistem yang mengizinkan proses lain dikerjakan sem
       console.log("C")
       //output A C B
    ```
-3. promise
+## promise
+Promise mewakili sebuah operasi yang belum selesai, tetapi diharapkan di masa mendatang.
+Sama halnya sebuah janji, promise memiliki 3 kemungkinan state :
+- pendind
+- fulfilled
+- rejected
+
+
 4. async await
