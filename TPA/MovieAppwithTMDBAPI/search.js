@@ -1,5 +1,5 @@
 async function searchMovieApp(){
-  let cari= document.getElementsByTagName("input").value
+  let cari= document.getElementsByTagName("form").value
   fetch(`https://api.themoviedb.org/3/search/movie?api_key=9ce85ed406f6b2e4420bb68fe84eb2a1&query=${cari}&page=1`)
   .then(result => {
       return result.json()
