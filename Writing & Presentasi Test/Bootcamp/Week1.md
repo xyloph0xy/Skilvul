@@ -70,9 +70,25 @@ Pada proses transfer data terdapat [status code](https://restfulapi.net/http-sta
 # Node JS
 
 Merupakan javaScript runtime yang dibangun di atas javaScript engine yang bernama _V8_. Runtime sendiri adalah sebuah tempat untuk mengeksekuis code yang kita buat. **Node Js** dibuat pada tahun 2009 oleh Ryan Dahl, Ryan Dahl ingin membuat sebuah web server yang menggunakan event loop, web server tersebut sudah pernah dicoba menggunakan bahasa pemrograman C, Lua, dan Haskell namun masih menemukan banyak problem. Akhirnya Ryan Dahl mencoba menggunakan V8 dan berhasil.
+
 Fitur utama yang ada pada Node Js :
 
 1. File system
 2. Http dan Https
 3. REPL (Read, Eval, Print, Loop)
 4. Console
+
+## [Install](https://nodejs.org/en/) node js
+
+1. Ketik node-v untuk mengetahui apakah installasi berhasil atau tidak
+2. Ketik npm-v untuk mengecek NPM yang sudah disediakan oleh NodeJs
+3. Untuk melakukan running, ketik `node namaFile` pada terminal direktori file js nya
+
+## Build in Module pada Node Js
+
+1. **console**
+   Sama seperti javaScript, node js memiliki module bawaan untuk menampilkan debug atau code secara interface
+   <img src="./image/console.png">
+2. **process**
+   digunakan untuk mengontrol dan menampilkan proses yang sedang dijalankan
+   <img src="./image/process.png">
