@@ -92,3 +92,75 @@ Fitur utama yang ada pada Node Js :
 2. **process**
    digunakan untuk mengontrol dan menampilkan proses yang sedang dijalankan
    <img src="./image/process.png">
+3. **os**
+   digunakan untuk menampilkan informasi terkait sistem operasi komputer yang digunakan user
+   <img src="./image/os.png">
+4. **util**
+   alat bantu yang mendukung kebutuhan internal API di Node Js
+   <img src="./image/util.png">
+5. **events**
+   <img src="./image/event.png">
+   Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan  event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
+6. **HTTP**
+   built-in module tersebut memungkinakn node js mentransfer data melalui Hyper Text Transfer Protocol (HTTP) sehingga server HTTP dapat mendengarkan port server dan memberikan respons kembali ke klien.
+   rules :
+   - gunakan `require()`
+   - gunakan method `createServer()` untuk membuat server HTTP
+   - Callback function yang digunakan pada method `http.createServer()`, akan dijalankan ketika seseorang mencoba mengakses komputer pada port 8080.
+   ```javascript
+   const http = require('http');
+
+   http.createServer((req,res)=>{
+      //createServer merupakan callback function,
+      //yang isinya requestlistener(request dan respon)
+      //req merupakan nama parameter dari request dan res untuk respon
+      res.write("Hai")
+      res.end()
+      //res.end digunakan untuk memberi tanda bahwa respon sudah selesai
+   }).listen(8080,()=>{
+      console.log('Server running at http://localhost:8080');
+      //untuk menentukan port mana yang akan digunakan
+      //port harus dicek apakah sudah dipakai atau belum, supaya tidak terjadi conflict
+      //cek port https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+   })
+   //.listen digunakan untuk mengaktifkan apa yang kita buat
+   ```
+   <img src="./image/running-port.png">
+   apabila alamat http://localhost:8080 diklik, maka akan muncul tampilan seperti dibawah ini
+   <img src="./image/hasil-running.png">
+
+   **HTTP Header**
+   - gunakan method `res.writeHead()` untuk menambahkan header HTTP
+   - Argumen pertama dari method res.writeHead() adalah status code
+   - Argumen kedua adalah objek yang berisi header respons.
+   - Respons yang dikembalikan dari HTTP web server bisa dalam berbagai format (JSON, HTML, XML, CSV, zip, audio, video, PDF ,dan lain-lain)
+    ```javascript
+   const http = require('http');
+
+   http.createServer((req,res)=>{
+      res.writeHead(200,{'Content-Type':'text/html'})
+      res.write("Hai")
+      res.end()
+   }).listen(8080,()=>{
+      console.log('Server running at http://localhost:8080');
+   })
+   ```
+   <img src="./image/writeHead.png">
+
+   **Membaca query string**
+   - Callback function pada method http.createServer() memiliki argumen req yang mewakili request dari klien, sebagai objek (objek http.IncomingMessage).
+   - Objek ini memiliki sebuah properti yang disebut "url" yang menyimpan informasi url yang sedang mengakses.
+   ```javascript
+   const http = require('http');
+
+   http.createServer((req,res)=>{
+      res.writeHead(200,{'Content-Type':'text/html'})
+      res.write(req.url)
+      res.end()
+   }).listen(8080,()=>{
+      console.log('Server running at http://localhost:8080');
+   })
+   ```
+   <img src="./image/Luluk.png">
+
+   apabila alamat yang diketik adalah http://localhost:8080/sofi , maka yang ditampilkan di browser adalah sofi
