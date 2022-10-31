@@ -111,7 +111,7 @@ Fitur utama yang ada pada Node Js :
 
    <img src="./image/event.png">
 
-   Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan  event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
+   Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
 
 6. **HTTP**
    built-in module tersebut memungkinakn node js mentransfer data melalui Hyper Text Transfer Protocol (HTTP) sehingga server HTTP dapat mendengarkan port server dan memberikan respons kembali ke klien.
@@ -205,11 +205,8 @@ Merupakan framework yang digunakan untuk membuat web server yang membantu pengel
 Untuk menggunakan express kita harus menginstallnya dengan mengetikkan `npm install express`, hasilnya akan terlihat seperti contoh di bawah ini :
 
 ```html
-$ npm i express
-added 57 packages, and audited 58 packages in 12s
-7 packages are looking for funding
-run `npm fund` for details
-found 0 vulnerabilities
+$ npm i express added 57 packages, and audited 58 packages in 12s 7 packages are
+looking for funding run `npm fund` for details found 0 vulnerabilities
 ```
 
 setelah berhasil menginstall express maka akan ada beberapa file baru pada direktorinya.
@@ -218,23 +215,16 @@ Kemudian terdapat sebuah module yang digunakan untuk mempermudah develop server 
 
 cara installnya cukup ketikkan `npm install --save-dev nodemon` pada terminal direktori, kemudian akan muncul teks seperti di bawah ini
 
-`added 32 packages, and audited 90 packages in 24s
-
-10 packages are looking for funding
-run `npm fund` for details
-
-found 0 vulnerabilities`
+```html
+added 32 packages, and audited 90 packages in 24s 10 packages are looking for
+funding run `npm fund` for details found 0 vulnerabilities
+```
 
 kemudian install nodemon secara global untuk mempermudah penggunaannya
+
 ```html
-$ npm i -g nodemon
-
-added 32 packages, and audited 33 packages in 6s
-
-3 packages are looking for funding
-run `npm fund` for details
-
-found 0 vulnerabilities
+$ npm i -g nodemon added 32 packages, and audited 33 packages in 6s 3 packages
+are looking for funding run `npm fund` for details found 0 vulnerabilities
 ```
 
 cara menggunakan nodemon dalah `nodemon namaApp`
