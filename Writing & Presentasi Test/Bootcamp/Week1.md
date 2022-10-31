@@ -429,6 +429,6 @@ kemudian terdapat foreign key yang merupakan sebuah atribut atau gabungan atribu
 
 ## Entity model diagram
 
-<img src="./image/emd.png">
+<img src="./image/erd.png">
 
 EMD dibuat setelah erd selesai dibuat, bertujuan untuk memudahkan pembacaan
