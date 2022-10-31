@@ -14,6 +14,7 @@ Server sendiri terdiri dari dua bagian, yaitu :
 
 Terdapat sebuah analogi yang menggambarkan hubungan antara Front-End, Back-End dan Server
 <img src="./image/web-server.png">
+
 Web application akan melakukan request ke server melalui API, kemudian request tersebut akan diproses oleh oleh server, data yang dibutuhkan ketika request diproses akan diambil dari database, setelah request selesai diproses data tersebut akan dikembalikan ke web application. Pada API sendiri dapat diberikan sistem keamanan supaya tidak semua orang dapat mengakses informasi yang tersimpan di dalam database.
 
 ### Arsitektur Web Service
@@ -109,7 +110,8 @@ Fitur utama yang ada pada Node Js :
 5. **events**
 
    <img src="./image/event.png">
-   Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan  event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
+
+   Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
 
 6. **HTTP**
    built-in module tersebut memungkinakn node js mentransfer data melalui Hyper Text Transfer Protocol (HTTP) sehingga server HTTP dapat mendengarkan port server dan memberikan respons kembali ke klien.
@@ -198,18 +200,58 @@ Fitur utama yang ada pada Node Js :
 
 Merupakan framework yang digunakan untuk membuat web server yang membantu pengelolaan aliran data dari server ke aplikasi, dibangun di atas node js dan bersifat open source.
 
+## Basic syntax
+
+```javascript
+const express = require("express"); //panggil express
+const app = express();
+app.get("/", (req, res) => {
+  //route
+  res.send("hai luluk");
+});
+app.listen(7000); //listen
+```
+
+## Basic route
+
+Merupakan sebuah end point yang dapat diakses menggunakan URL website.
+
+```javascript
+app.get("/", (req, res) => {
+  res.send("hai luluk");
+});
+```
+
+- `.get` merupakan method API
+- `'/'` merupakan alamat
+- `res.send("hai luluk")` merupakan response
+
+aplikasi di atas akan berjalan di alamat `http://localhost:7000` , 7000 diambil dari app.listen(7000)
+
+## [Response](http://expressjs.com/en/api.html#res)
+
+contoh response pada program di atas adalah res.send, selain itu kita dapat mengirim response dalam bentuk json suapay data yang dikirim mudah di akses
+
+## [Status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+Status code berfungsi sebagai informasi apakah route yang kita akses berjalan sebagaimana mestinya dan tidak terjadi error.
+
+## Nested route
+
+Digunakan ketika terdapat banyak route yang memiliki nama yang sama atau ingin membuat route yang lebih mendalam
+
+## Query
+
+Merupakan parameter yang digunakan untuk membantu menentukan tindakan yang lebih spesifik daripada hanya sekedar router biasa, query biasa ditaruh diakhir route dengan diawali `?` yang dilanutkan dengan key dan data yang diinginkan
+
 ## Membuat express nodejs
 
 Untuk menggunakan express kita harus menginstallnya dengan mengetikkan `npm install express`, hasilnya akan terlihat seperti contoh di bawah ini :
 
-`$ npm i express
-
-added 57 packages, and audited 58 packages in 12s
-
-7 packages are looking for funding
-run `npm fund` for details
-
-found 0 vulnerabilities`
+```html
+$ npm i express added 57 packages, and audited 58 packages in 12s 7 packages are
+looking for funding run `npm fund` for details found 0 vulnerabilities
+```
 
 setelah berhasil menginstall express maka akan ada beberapa file baru pada direktorinya.
 
@@ -217,22 +259,17 @@ Kemudian terdapat sebuah module yang digunakan untuk mempermudah develop server 
 
 cara installnya cukup ketikkan `npm install --save-dev nodemon` pada terminal direktori, kemudian akan muncul teks seperti di bawah ini
 
-`added 32 packages, and audited 90 packages in 24s
-
-10 packages are looking for funding
-run `npm fund` for details
-
-found 0 vulnerabilities`
+```html
+added 32 packages, and audited 90 packages in 24s 10 packages are looking for
+funding run `npm fund` for details found 0 vulnerabilities
+```
 
 kemudian install nodemon secara global untuk mempermudah penggunaannya
-`$ npm i -g nodemon
 
-added 32 packages, and audited 33 packages in 6s
-
-3 packages are looking for funding
-run `npm fund` for details
-
-found 0 vulnerabilities`
+```html
+$ npm i -g nodemon added 32 packages, and audited 33 packages in 6s 3 packages
+are looking for funding run `npm fund` for details found 0 vulnerabilities
+```
 
 cara menggunakan nodemon dalah `nodemon namaApp`
 
@@ -243,7 +280,7 @@ const app = express(); //digunakan untuk membuat aplikasi express ke dalam varia
 app.get("/movies", (req, res) => {
   // .get selain menerima path:/movies, juga menerima handler berupa callback dengan maksimal 3 parameter
   res.send("hai");
-  //digunakan untuk mengirim objek, array, string dll
+  //digunakan untuk mengirim plain text ketika kita mengakses route tersebut.
 });
 
 app.get("/biodata", (req, res) => {
@@ -269,23 +306,73 @@ hasil pemanggilan localhost menggunakan endpoint /biodata
 
 ## Middleware pada express
 
-Middleware merupakan function yang menjadi penyaring, penengah, yang memiliki akses ke object request dan response. Contoh kerja middleware adalah pada fitur login, middleware akan menyaring apakah password sudah sesuai atau belum untuk bisa dikelola di controller.
-const express = require('express');//panggil express
-const app = express();//digunakan untuk membuat aplikasi express ke dalam variabel app
+Middleware merupakan function yang menjadi penyaring, penengah, yang memiliki akses ke object request, response dan sebuah fungsi next didalam request-response cycle. Contoh kerja middleware adalah pada fitur login, middleware akan menyaring apakah password sudah sesuai atau belum untuk bisa dikelola di controller.
+
+### Yang dapat dilakukan oleh middleware
+
+1. Menjalankan kode apapun.
+2. Memodifikasi Object Request dan Object Response.
+3. Menghentikan request-response cycle.
+4. Melanjutkan ke middleware function selanjutnya atau ke handler function dalam suatu request response cycle.
+
+### Jenis Express Middleware Berdasarkan Cara Penggunaan
+
+1. Application Level Middleware
+
+- Application Level Middleware adalah sebuh function middleware yang melekat ke instance object Application Express.
+- Penggunaannya dengan cara memanggil method `app.use()`.
+- Application Level Middleware akan di jalankan setiap kali Express Application menerima sebuah HTTP Request.
+
+2. Router Level Middleware
+
+- Router Level Middleware adalah sebuh function middleware yang cara kerjanya sama persis dengan application level middleware, yang menjadikan perbedaan adalah middleware function ini melekat ke instance object Router Express
+- Penggunaannya dengan cara memanggil method `express.Router()`.
+- Router Level Middleware hanya akan di jalankan setiap kali sebuah Express Router yang menggunakan middleware ini menerima sebuah HTTP Request, sedangan pada Router yang lain tidak akan dijalankan.
+
+3. Error Handling Middleware
+
+- Error Handling mengacu kepada bagaimana cara sebuah Express Application menangkap dan memproses error yang terjadi, baik itu berupa kesalahan yang synchronous maupun asynchronous.
+- Error handle function default milik Express Application hanyalah kerangka functionnya saja, kita tetap harus menuliskan di dalam function ini bagaimana sebuah error akan di handle.
 
 ```javascript
+const express = require("express"); //panggil express
+const app = express();
+
+const errorHandling = function (err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send("something broke");
+};
+```
+
+## Jenis Express Middleware Berdasarkan Source Middleware Function
+
+1. Express Build-in Middleware
+
+- `express.static()`, memungkinkan sebuah express application melayani asset statis berupa file, seperti file HTML, gambar, video, dokumen, dan sebagainya.
+- `express.json()`, memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format JSON.
+- `express.urlEncoded()`, memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format urlencoded.
+
+2. Third Party (custom) Middleware
+   Menggunakan third party middleware function dapat menambahkan fungsionalitas dari sebuah Express Application.
+
+```javascript
+const express = require("express"); //panggil express
+const app = express(); //digunakan untuk membuat aplikasi express ke dalam variabel app
+
 app.use(express.json());
 //.json digunakan untuk parsing request ke json ketika melakukan post
 //app.use digunakan untuk menggunakan function middleware
 
+const biodata = [
+  {
+    nama: "Luluk",
+    tempat: "Magelang",
+    tanggal: "20 Juli 2002",
+  },
+];
+
 app.get("/biodata", (req, res) => {
-  res.send([
-    {
-      nama: "Luluk",
-      tempat: "Magelang",
-      tanggal: "20 Juli 2002",
-    },
-  ]);
+  res.send(biodata);
 });
 
 app.post("/biodata", (req, res) => {
@@ -293,14 +380,55 @@ app.post("/biodata", (req, res) => {
   //untuk menggunakan post diperlukan adanya middleware
   const data = req.body;
   biodata.push(data);
-  // console.log(data);
+  //digunakan untuk menambahkan data respone yang di request oleh user
+  res.send("oke");
   //menampilkan data yang dikirim oleh user ke dalam terminal
   res.status(201);
   //digunakan untuk memberi status code
-  res.send("oke");
 });
 
 app.listen(7000);
 ```
 
-#
+<img src="./image/post.png">
+
+ketika menambahka data berhasil, maka akan menampilkan reponse oke.
+
+<img src="./image/get.png">
+
+data di atas merupakan data terbaru setelah user melakukan request tambah data pada post.
+
+# DAY 4: 27 Oktober 2022
+
+# Design Database
+
+## Entity Relationship Model
+
+Digunakan untuk mendesain database berdasar pelaku atau objek.
+contoh case :
+
+- user dapat mengikuti matakuliah
+
+<img src="./image/emr1.png">
+
+objek user dan matakuliah dihubungkan oleh relasi mengikuti, relasi digambarkan dengan belahketupat
+
+- 1 dosen hanya bisa mengajar 1 matakuliah
+
+<img src="./image/emr2.png">
+
+Setelah diteliti kembali, ternyata 1 user dapat mengambil banyak matakuliah, dan 1 matakuliah dapat diambil banyak user. Oleh sebab itu relasi antara user dan matakuliah adalah many to many. Karena relasinya many to many, maka relasi mengikuti akan menjadi sebuah entita baru bernama jadwal.
+
+Setelah menentukan entity dan relasi, selanjutnya tentukan properti pada setiap entity.
+contoh :
+
+<img src="./image/emr3.png">
+
+pada setiap entitas pasti memiliki satu properti yang unik dan tidak akan dimiliki oleh entitas lain, properti tersebut bernama primary key (lingkaran kuning).
+kemudian terdapat foreign key yang merupakan sebuah atribut atau gabungan atribut yang terdapat dalam suatu tabel yang digunakan untuk menciptakan hubungan (relasi) antara dua tabel.
+
+## Entity model diagram
+
+<img src="./image/rd.png">
+
+EMD dibuat setelah erd selesai dibuat, bertujuan untuk memudahkan pembacaan
