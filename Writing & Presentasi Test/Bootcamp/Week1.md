@@ -14,6 +14,7 @@ Server sendiri terdiri dari dua bagian, yaitu :
 
 Terdapat sebuah analogi yang menggambarkan hubungan antara Front-End, Back-End dan Server
 <img src="./image/web-server.png">
+
 Web application akan melakukan request ke server melalui API, kemudian request tersebut akan diproses oleh oleh server, data yang dibutuhkan ketika request diproses akan diambil dari database, setelah request selesai diproses data tersebut akan dikembalikan ke web application. Pada API sendiri dapat diberikan sistem keamanan supaya tidak semua orang dapat mengakses informasi yang tersimpan di dalam database.
 
 ### Arsitektur Web Service
@@ -109,6 +110,7 @@ Fitur utama yang ada pada Node Js :
 5. **events**
 
    <img src="./image/event.png">
+
    Callback dengan event memang hampir sama, bedanya callback dikerjakan setelah fungsi tak sinkron memberikan nilai kembalian, sedangkan  event dikerjakan dengan menggunakan pendekatan observer. Observer disini adalah fungsi yang dimanfaatkan sebagai pendeteksi ketika terjadi suatu event. Gunakan `method on(nama_event, fungsi observer)` untuk menambahkan observer sebagai detektor event.
 
 6. **HTTP**
@@ -202,14 +204,13 @@ Merupakan framework yang digunakan untuk membuat web server yang membantu pengel
 
 Untuk menggunakan express kita harus menginstallnya dengan mengetikkan `npm install express`, hasilnya akan terlihat seperti contoh di bawah ini :
 
-`$ npm i express
-
+```html
+$ npm i express
 added 57 packages, and audited 58 packages in 12s
-
 7 packages are looking for funding
 run `npm fund` for details
-
-found 0 vulnerabilities`
+found 0 vulnerabilities
+```
 
 setelah berhasil menginstall express maka akan ada beberapa file baru pada direktorinya.
 
@@ -225,14 +226,16 @@ run `npm fund` for details
 found 0 vulnerabilities`
 
 kemudian install nodemon secara global untuk mempermudah penggunaannya
-`$ npm i -g nodemon
+```html
+$ npm i -g nodemon
 
 added 32 packages, and audited 33 packages in 6s
 
 3 packages are looking for funding
 run `npm fund` for details
 
-found 0 vulnerabilities`
+found 0 vulnerabilities
+```
 
 cara menggunakan nodemon dalah `nodemon namaApp`
 
