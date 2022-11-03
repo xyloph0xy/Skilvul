@@ -432,3 +432,13 @@ kemudian terdapat foreign key yang merupakan sebuah atribut atau gabungan atribu
 <img src="./image/erd.png">
 
 EMD dibuat setelah erd selesai dibuat, bertujuan untuk memudahkan pembacaan
+
+# DAY 5: 28 Oktober 2022
+
+# Design Database
+
+review materi kemarin
+
+## Normalisasi
+
+Sebuah teknik untuk mengorganisir data ke dalam bentuk tabel supa data tidak redundant, mudah dicari, dan tidak terjadi anomali. Normalisasi biasa digunakan ketika mendesign database yang dibentuk dari kumpulan data dan mendesign ulang database yang kurang bagus.
