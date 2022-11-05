@@ -55,7 +55,7 @@ atribut HttpOnly pada Set-Cookie di atas memastikan bahwa data tidak dapat diaks
 
 Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data meskipun browser telah ditutup. Data yang ada pada local storage dapat dihapus dengan menjalankan perintah hapus atau clear data pada browser.
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40puneetahuja_23950%2Fcookies-vs-localstorage-vs-sessionstorage-9cd77b864f&psig=AOvVaw1WF1ZyZmczNaW0fO3hEaL4&ust=1667666445871000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKjsi-P7lPsCFQAAAAAdAAAAABAO" weidth="600" height="250">
+<img src="https://miro.medium.com/max/1100/1*HC1PWdue5ZofBEwOMEsBBA.png" weidth="600" height="250">
 
 ## [Session Based Authentication in Express](https://www.section.io/engineering-education/session-management-in-nodejs-using-expressjs-and-express-session/)
 
@@ -210,3 +210,74 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
     ```js
     app.listen(PORT, () => console.log(`Server Running at port ${PORT}`));
     ```
+
+## JSON Web Token
+Merupakan cara aman untuk mewakili sekumpuan informasi antara dua pihak dengan mendefinisikan JSON Object dalam RFC 7519. JWT bersifat aman karena ditandai secara digital menggunakan sepasang kunci rahasia atau pribadi. Token terdiri dari:
+1. Header, mengandung informasi mengenai jenis token dan algoritma yang digunakan
+2. Payload, berisi data yang ingin dikirim melalui token. Biasanya data ini berupa data yang bersifat unik bagi user, contoh email, id dan data role karena data tersebut akan digunakan sebgai tanda pengenal si pengirim token
+3. Signature, merupakan hash gabungan dari heaer, payload dan secret key. Berguna untuk memverifikasi bahwa header maupun payload yang ada di token tidak berubah dari nilai asinya
+
+<img src="https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/jwt-structure.png" weidth="600" height="200">
+
+
+Install `npm install jsonwebtoken` pada terminal sebelum menggunakan jwt
+
+```js
+//memanggil jwt dari dependency
+const { appendFile } = require('fs');
+const jwt = require('jsonwebtoken')
+
+//sign asynchronously, nilai privateKey bebas
+jwt.sign({ foo : 'bar'},"privateKey",{algortihm:'RS222'}, function(err,token){
+    console.log(token);
+})
+
+//contoh penerapan pada express
+jwt.sign({example},'secret',{expiresIn:'10h'},(error,token)=>{
+    if(error){
+        console.log(error);
+    }else{
+        resizeBy.json({
+            token,
+        })
+    }
+})
+
+//contoh verify token pada express
+const verifyToken =(req, res, next)=> {
+    const bearerHeader = req.headers['authorization'];
+    if(typeof bearerHeader !== "undefined"){
+        const bearer = bearerHeader.split(' ');
+        const bearerToken = bearer[1];
+        req.token = bearerToken;
+        next();
+    }else{
+        res.sendStatus(403)
+    }
+}
+
+//contoh penerapan pada express, pada routes tertentu hanya bisa diakses saat user melakukan login
+app.post('/users/posts', verifyToken,(req, res)=>{
+    const newPost = req.body.post
+    jwt.verify(req.token,'secret',(err,authData)=>{
+        if(err){
+            res.sendStatus(403);
+        }else{
+            res.json({
+                message: `Post Created......`,
+                comment: newPost,
+                authData
+            })
+        }
+    })
+})
+```
+
+## Password Authentication (Bcrypt)
+Semakin cepat function, semakin cepat pula hacker dapat mengambil password hashing melalui serangan brute-force. Sehingga menggunakan function yang lebih lambat dapat melindungi usermu. Untuk menangani masalah ini, kita dapat menggunakan algoritma bcrypt dan library.
+
+function hash hanya dapat bekerja pada satu jalur, sehingga password tidak mudh diambil tanpa mengetahui salt, rounds, dan key (password).
+Berbeda dengan enkripsi yang dapat dengan mudah di decrypt selama mengetahui algoritma enkripsinya. 
+
+### Hash + Salt
+Salt merupakan value random yang ditambhakan kepada input function hashing untuk membuat setiap hash password yang unik. Salts membantu kita untuk mengurangi resiko serangan forcing attackers terhadap tabel hash.
