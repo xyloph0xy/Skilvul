@@ -212,72 +212,317 @@ Berbeda dengan session dan cookie, local storage ini akan tetap menyimpan data m
     ```
 
 ## JSON Web Token
+
 Merupakan cara aman untuk mewakili sekumpuan informasi antara dua pihak dengan mendefinisikan JSON Object dalam RFC 7519. JWT bersifat aman karena ditandai secara digital menggunakan sepasang kunci rahasia atau pribadi. Token terdiri dari:
+
 1. Header, mengandung informasi mengenai jenis token dan algoritma yang digunakan
 2. Payload, berisi data yang ingin dikirim melalui token. Biasanya data ini berupa data yang bersifat unik bagi user, contoh email, id dan data role karena data tersebut akan digunakan sebgai tanda pengenal si pengirim token
 3. Signature, merupakan hash gabungan dari heaer, payload dan secret key. Berguna untuk memverifikasi bahwa header maupun payload yang ada di token tidak berubah dari nilai asinya
 
 <img src="https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/jwt-structure.png" weidth="600" height="200">
 
-
 Install `npm install jsonwebtoken` pada terminal sebelum menggunakan jwt
 
 ```js
 //memanggil jwt dari dependency
-const { appendFile } = require('fs');
-const jwt = require('jsonwebtoken')
+const { appendFile } = require("fs");
+const jwt = require("jsonwebtoken");
 
 //sign asynchronously, nilai privateKey bebas
-jwt.sign({ foo : 'bar'},"privateKey",{algortihm:'RS222'}, function(err,token){
+jwt.sign(
+  { foo: "bar" },
+  "privateKey",
+  { algortihm: "RS222" },
+  function (err, token) {
     console.log(token);
-})
+  }
+);
 
 //contoh penerapan pada express
-jwt.sign({example},'secret',{expiresIn:'10h'},(error,token)=>{
-    if(error){
-        console.log(error);
-    }else{
-        resizeBy.json({
-            token,
-        })
-    }
-})
+jwt.sign({ example }, "secret", { expiresIn: "10h" }, (error, token) => {
+  if (error) {
+    console.log(error);
+  } else {
+    resizeBy.json({
+      token,
+    });
+  }
+});
 
 //contoh verify token pada express
-const verifyToken =(req, res, next)=> {
-    const bearerHeader = req.headers['authorization'];
-    if(typeof bearerHeader !== "undefined"){
-        const bearer = bearerHeader.split(' ');
-        const bearerToken = bearer[1];
-        req.token = bearerToken;
-        next();
-    }else{
-        res.sendStatus(403)
-    }
-}
+const verifyToken = (req, res, next) => {
+  const bearerHeader = req.headers["authorization"];
+  if (typeof bearerHeader !== "undefined") {
+    const bearer = bearerHeader.split(" ");
+    const bearerToken = bearer[1];
+    req.token = bearerToken;
+    next();
+  } else {
+    res.sendStatus(403);
+  }
+};
 
 //contoh penerapan pada express, pada routes tertentu hanya bisa diakses saat user melakukan login
-app.post('/users/posts', verifyToken,(req, res)=>{
-    const newPost = req.body.post
-    jwt.verify(req.token,'secret',(err,authData)=>{
-        if(err){
-            res.sendStatus(403);
-        }else{
-            res.json({
-                message: `Post Created......`,
-                comment: newPost,
-                authData
-            })
-        }
-    })
-})
+app.post("/users/posts", verifyToken, (req, res) => {
+  const newPost = req.body.post;
+  jwt.verify(req.token, "secret", (err, authData) => {
+    if (err) {
+      res.sendStatus(403);
+    } else {
+      res.json({
+        message: `Post Created......`,
+        comment: newPost,
+        authData,
+      });
+    }
+  });
+});
 ```
 
 ## Password Authentication (Bcrypt)
+
 Semakin cepat function, semakin cepat pula hacker dapat mengambil password hashing melalui serangan brute-force. Sehingga menggunakan function yang lebih lambat dapat melindungi usermu. Untuk menangani masalah ini, kita dapat menggunakan algoritma bcrypt dan library.
 
 function hash hanya dapat bekerja pada satu jalur, sehingga password tidak mudh diambil tanpa mengetahui salt, rounds, dan key (password).
-Berbeda dengan enkripsi yang dapat dengan mudah di decrypt selama mengetahui algoritma enkripsinya. 
+Berbeda dengan enkripsi yang dapat dengan mudah di decrypt selama mengetahui algoritma enkripsinya.
 
 ### Hash + Salt
+
 Salt merupakan value random yang ditambhakan kepada input function hashing untuk membuat setiap hash password yang unik. Salts membantu kita untuk mengurangi resiko serangan forcing attackers terhadap tabel hash.
+
+# Day 4: 4 November 2022
+
+# Sequelize
+
+Merupakan sebuah ORM Node JS berbasis promise yang mendukung berbagai macam relational database seperti MySQL, PostgresQL, MariaDB, SQLite dan Microsoft SQL Server.
+
+## ORM
+
+Sebuah teknik pemrograman yang digunakan untuk mengkonversi data dari bahasa OOP menjadi database relational
+
+### Installallation Sequelize
+
+1. install sequelize-cli
+   ketik `npm install -g sequelize-cli`, digunakan untuk memudahkan kita dalam menjalankan generator menggunakan terminal.
+
+2. Install Sequelize
+
+```js
+npm install --save sequelize
+install Driver Database
+npm install --save mysql
+```
+
+digunakan untuk menginisiasi project
+
+### Generate sequelize
+
+`npx sequelize-cli init`, supaya dapat meng-generate code kita perlu melakukan inisialisasi pada project.
+Setelah proses inisialisasi selesai maka akan muncul 4 folder baru :
+
+1. config, terdapat sebuah file config yang memberi tahu CLI bagaimana melakukan cnnect dengan database
+2. models, berisi semua models untuk project yang kamu buat
+3. migrations, mengandung semua fle migration
+4. seeders, berisi semua file seed
+
+### Setting databse
+```js
+const { Sequelize } = require('sequelize');
+
+// Option 1: Passing a connection URI
+const sequelize = new Sequelize('sqlite::memory:') // Example for sqlite
+const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname') // Example for postgres
+
+// Option 2: Passing parameters separately (sqlite)
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: 'path/to/database.sqlite'
+});
+
+// Option 3: Passing parameters separately (other dialects)
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
+});
+```
+
+### [Generate Model](https://sequelize.org/docs/v6/other-topics/migrations/)
+```js
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+```
+Command di atas akan membuat model file user di folder user dan membuat file migration dengan nama XXXXXXXXXXXXX-create-user.js di folder migration
+
+### Running migrations
+```js
+npx sequelize-cli db:migrate
+```
+command di atas akan mengeksekusi step di bawah ini:
+1. `SequelizeMeta`, tabel ini digunakan ntuk merekam migration yang di run di database terbaru
+2. Mencari file migration yang belum di run dengan mengecek tabel `SequelizaMeta`, pada bagian ini akan merunning migration `XXXXXXXXXXXXX-create-user.js` 
+3. Membuat tabel `Users` dengan semua kolom yang ditentukan di file migration
+
+### Undo
+- `npx sequelize-cli db:migrate:undo` ,command tersebut digunakan untuk kembali ke migrasi yang paling terbaru.
+- `npx sequelize-cli db:migrate:undo:all`, digunakan untuk kembali ke tahap inisial dengan meng-undo semua migrasi
+- `npx sequelize-cli db:migrate:undo:all --to XXXXXXXXXXXXXX-create-posts.js`, kamu juga dapat kembali ke migrasi tertentu dengan menyelipkaan nama di opsi `--to`
+
+### Membuat first seed
+Untuk mengatur data migrasi, kamu dapat menggunakan seeders. File seed adalah beberapa perubahan data yang dapat digunakan untuk mengisi tabel database dengan sebuah sampel, seed sendiri adalah data awal yang dapat digunakan untuk mengisi data di database untuk keperluan awal project menggunakan sequelize. 
+
+`npx sequelize-cli seed:generate --name demo-user`
+
+command di atas akan membuat file di folder seedeers, nama file mungkin akan seperti XXXXXXXXXXXXXX-demo-user.js. ini akan mengikuti semantic up/down yang sama dengan file migrasi
+
+di bawah ini adalah contoh cara menggunakan seed
+
+```js
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('Users', [{
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'example@example.com',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }]);
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete('Users', null, {});
+  }
+};
+```
+
+up digunakan untuk mengisi data di database, sedangkan down digunakan untuk menghapus semua data seed di database
+
+### Running seed
+Untuk mengcommitted seed file, lakukan command di bawah ini
+
+`npx sequelize-cli db:seed:all`, command tersebut akan mengeksekusi file seed dan demo user akan di tambahkan ke dalam tabel `User`.
+
+Karena riwayat eksesusi seeder tidak disimpan seperti pada SequelizeMeta. maka jika kamu ingin mengubah ini, kamu dapat membacanya di Storage
+
+### Undoing Seeds
+Seed dapat di undo jika seed menggunakan beberapa penyimpanan, terdapat 2 command yang tersedia untuk melakukan undo 
+
+- `npx sequelize-cli db:seed:undo`, digunakan unutk mengundo seed terbaru
+- `npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data`, digunakan untuk mengundo seed yang spesifik
+- `npx sequelize-cli db:seed:undo:all`, digunakan untuk meng-undo seluruh seeds
+
+### Membuat CRUD dengan Express dan Sequelize
+Beberapa endpoint RESTFUL yang dapat digunakan untuk membuat CRUD :
+1. Get All Todos
+  ```js
+  const TodoModel = require('./models').Todo;
+
+  app.get('./todos',async function (req,res){
+    try{
+      const todos = await TodoModel.findAll();
+
+      res.status(200).json(todos);
+    }catch(error){
+      res.status(500).json({
+        message: error.message |'internal server error'|
+      });
+    }
+  })
+  ```
+2. Get Todo Detail By Id
+  ```js
+  const TodoModel = require('./models').Todo;
+
+  app.get('/todos/:todoId', async function(req,res){
+    try{
+      const {todoId} = req.params;
+      const todo = await TodoModel.findOne({id : Number(todoId)});
+
+      res.status(200).json(todo);
+    }catch(error){
+      res.status(500).json({
+        message: error.message || 'internal server error',
+      });
+    }
+  })
+  ```
+3. Create New Todo
+  ```js
+  const TodoModel = require('./models').Todo;
+
+  app.post('./todos', async function(req,res){
+    try{
+      const { title, description, startTime} = req.body;
+
+      const newTodoData = {
+        title: title,
+        description: description,
+        startTime: startTime,
+        status:'false',
+      };
+
+      const newTodo = await TodoModel.create(newTodoData);
+
+      res.status(201).json({
+        message : 'new todo created',
+        todo : newTodo,
+      });
+    }catch(error){
+      req.status(500).json({
+        message: error.message || 'internal server error',
+      });
+    }
+  });
+  ```
+4. Update Todo By Id
+  ```js
+  const TodoModel = require('./models').Todo;
+
+  app.patch('./todos/:todoId', async function(req,res){
+    try{
+      const {todoId} = req.params;
+      const {title, description, startTime, status} = req.body;
+
+      const updateTodoData = {
+        title : title,
+        description : description,
+        startTime: startTime,
+        status: status,
+      };
+
+      const updateTodo = await TodoModel.update(updateTodoData,{
+        where: {
+          id : todoID,
+        }
+      });
+      res.status(200).json({
+        message : 'update todo success',
+      });
+    }catch (error){
+      res.status(500).json({
+        message: error.message || 'internal server error',
+      });
+    }
+  })
+  ```
+5. Delete Todo
+```js
+const TodoModel = require('./models').Todo;
+
+app.delete('./todos/:todoId', async function (req,res){
+  try{
+    const { todoId }= req.params;
+
+    await TodoModels.destroy({
+      where: {
+        id: todoId,
+      },
+    });
+
+    res.status(200).json({
+      message: 'delete todo succes',
+    });
+  }catch(error){
+    res.status(500).json({
+      message: error.message || 'internal sever error',
+    });
+  }
+});
+```
