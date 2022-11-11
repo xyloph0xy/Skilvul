@@ -427,7 +427,7 @@ contoh :
 pada setiap entitas pasti memiliki satu properti yang unik dan tidak akan dimiliki oleh entitas lain, properti tersebut bernama primary key (lingkaran kuning).
 kemudian terdapat foreign key yang merupakan sebuah atribut atau gabungan atribut yang terdapat dalam suatu tabel yang digunakan untuk menciptakan hubungan (relasi) antara dua tabel.
 
-## Entity model diagram
+## Entity relational database
 
 <img src="./image/erd.png">
 
