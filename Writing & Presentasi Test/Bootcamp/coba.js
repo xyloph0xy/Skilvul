@@ -5,17 +5,8 @@ app.use(express.json());
 //.json digunakan untuk parsing request ke json ketika melakukan post
 //app.use digunakan untuk menggunakan function middleware
 
-const biodata =  [
-   {
-      nama: "Luluk",
-      tempat: "Magelang",
-      tanggal: "20 Juli 2002"
-   }
-]
+const biodata =  []
 
-app.get("/biodata",(req,res)=>{
-   res.send(biodata)
-})
 
 app.post("/biodata",(req,res)=>{
    //post digunakan untuk menerima inputan user dr request
@@ -23,11 +14,17 @@ app.post("/biodata",(req,res)=>{
    const data = req.body;
    biodata.push(data);
    //digunakan untuk menambahkan data respone yang di request oleh user
-   res.send("oke")
+   res.send(data)
    //menampilkan data yang dikirim oleh user ke dalam terminal
    res.status(201)
    //digunakan untuk memberi status code
    
 })
+
+app.get("/biodata",(req,res)=>{
+   res.send(biodata)
+})
+
+
 
 app.listen(7000);
