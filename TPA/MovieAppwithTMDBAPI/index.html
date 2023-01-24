@@ -19,27 +19,29 @@
   </head>
 
   <body>
-    <nav class="navbar p-5">
+    <nav class="navbar p-3 ">
       <div class="container-fluid">
-        <a class="navbar-brand fs" href="index.html"><strong>SkillMovie</strong></a>
+        <a class="navbar-brand fs" href="index.html">
+          <div class="text fs-3 fw-bold">SkillMovie</div>
+        </a>
         <form class="d-flex" role="search" id="search">
           <input
-
             class="form-control me-4"
             type="search"
             placeholder="Search"
             aria-label="Search"
             id="input"
+            style="width: 20rem;"
           />
           <button class="btn btn-outline-success" type="submit" >Search</button>
         </form>
       </div>
     </nav>
 
-    <div id="movie-app" class="row row-cols-3 row-cols-md-3 g-5 p-5"> 
+    <div id="movie-app" class="row row-cols-3 justify-content-center g-5 m-0 pb-5"> 
         <script src="script.js"></script>
     </div>
-
     
   </body>
+  <footer class="d-flex justify-content-center flex-wrap text fs-5 fw-bold p-2 bg-light">MSIB x Skilvul</footer>
 </html>

@@ -63,7 +63,7 @@ function listMovie(){
         show.innerHTML += 
         `
         
-        <div class="col ">
+        <div class="col" style= "width: 25rem ">
         <div class="card h-100 ">
           <img src="https://www.themoviedb.org/t/p/w500${item.poster_path}
           " class="card-img-top" alt="" />
